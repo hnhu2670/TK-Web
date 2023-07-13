@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
+    </style>
+    <link rel="stylesheet" href="/CSS/Header.css">
+    <link rel="stylesheet" href="/CSS/Profile.css">
+    <script src="/JS/Profile.js"></script>
+    <title>MY WEB</title>
+</head>
+<body>
+    <main>
+        <div class="sub-menu menu">
+            <nav class="flex">
+                <ul>
+                    <li>
+                        <div class="name">
+                            <a href="#">
+                                <h1>logo</h1>
+                            </a>
+                        </div>
+                     </li>
+                    <li>
+                        <a href="/HTML/Home.html">
+                            <i class="fa-solid fa-house"></i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-compass"></i>
+                        </a>
+                    </li>
+                    <li>
+                       <a href="/HTML/Mesenge.html">
+                            <i class="fa-regular fa-comment-dots"></i> 
+                       </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-bell"></i> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-regular fa-square-plus"></i> 
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- ảnh đại diện - ảnh bìa -->
+        <section class="content">
+            <div class="img-Profile ">
+                <div class="img">
+                    <img src="" alt="nền">
+                </div>
+                <div class="name flex">
+                    <div class="avatar">
+                        <img src="/IMG/avatar.jpg" alt="avatar">
+                    </div>
+                    <div class="fname">
+                        <h1>--pcc--</h1>
+                        <span>PCC</span>
+                    </div>
+                    <div class="infor flex">
+                        <div class="follow">
+                            <a href="#">
+                                <span>ĐANG THEO DÕI</span>
+                            </a>
+                        </div>
+                        <div class="setting">
+                            <a href="#">
+                                <i class="fa-solid fa-gears" style="font-size: 30px;"></i>                                <!-- <span>CAI DAT</span> -->
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+            </div>
+                <!-- <nội dung trang cá nhân --> 
+            <div class="main-Profile">
+                <div class="menu-top">
+                    <ul class="flex">
+                        <li><a href="#">BÀI VIẾT</a></li>
+                        <li><a href="#">YÊU THÍCH</a></li>
+                        <li><a href="#">ĐƯỢC GẮN THẺ</a></li>
+                    </ul>
+                </div>
+                <div class="box">
+                </div>
+                <div class="items flex">
+                    
+                    <div class="item">
+                        <img src="/IMG/profile/cat1.jpg" alt="">
+                        <div class="bg-top">
+                            <span onclick="changeIcon(this)">
+                                <i class="fa-solid fa-heart icon-heart" ></i>
+                                <!-- <i class="fa-regular fa-paper-plane icon-plane"></i> -->
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat2.jpg" alt="">
+                        <div class="bg-top">
+                            <span>
+                                <i class="fa-solid fa-heart icon-heart" onclick="changeIcon()"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat3.jpg" alt="">
+                        <div class="bg-top">
+                            <span>
+                                <i class="fa-solid fa-heart icon-heart"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat4.jpg" alt="">
+                        <div class="bg-top">
+                            <span>
+                                <i class="fa-solid fa-heart icon-heart"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat5.jpg" alt="">
+                        <div class="bg-top">
+                            <span>
+                                <i class="fa-solid fa-heart icon-heart"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat1.jpg" alt="">
+                        <div class="bg-top">
+                            <span>
+                                <i class="fa-solid fa-heart icon-heart"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section> 
+       
+    </main>
+</body>
+</html>

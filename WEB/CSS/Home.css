@@ -4,7 +4,7 @@
     height: 100%;
     position: relative;
     overflow-x: auto;
-    overflow-y: hidden;
+    overflow-y: hidden;  
 }
 .stories::-webkit-scrollbar{
     display: none;
@@ -59,4 +59,24 @@
 .right{
     top: 20px;
     right:20px;
+}
+
+/* myProfile */
+.myProfile {
+    width: 25%;
+}
+.myImg {
+    width: 20%;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.myImg img{
+    width: 100%;
+    border-radius: 50%;
+}
+.myName {
+    padding-top: 20px;
+}
+.myName a{
+    text-decoration: none;
 }

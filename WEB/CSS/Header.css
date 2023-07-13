@@ -4,6 +4,20 @@
     font-family: 'Jura', sans-serif;
     color: black;
 }
+/* sub-menu */
+div.sub-menu {
+    width: 4% !important;
+}
+.sub-menu a{
+    text-decoration: none;
+    color: black;
+}
+/* content */
+.content {
+    width: 97% !important;
+    margin-left: 4% !important;
+    margin: 0px auto;
+}
 body{
     margin: 0px 25px;
 }
@@ -28,15 +42,18 @@ body{
 .header {
     margin-top: 10px;
 }
-input#ip-search {
+input#ip-search{
     border: none ;
     font-size: 17px;
     width: 90%;
 }
-/* main */
-main{
-    margin: 20px auto;
+input#ip-search:focus{
+    outline: none;
 }
+/* main */
+/* main{
+    margin: 20px auto;
+} */
 div.menu{
     width: 17%;
     height: 100%;
@@ -58,7 +75,7 @@ div.menu ul li a{
 div.menu ul li span{
     padding-left: 15px;
 }
-section.content{
+section.h-content{
     width: 55%;
     margin: 0px auto;
     margin-left: 18%;
