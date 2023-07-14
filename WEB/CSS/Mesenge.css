@@ -80,6 +80,10 @@
     margin-top: 8px;
     font-size: 17px;
     width: 90%;
+    background: none;
+}
+#ip-find:focus{
+    outline: none;
 }
 .friend {
     margin-top: 30px;
@@ -141,9 +145,10 @@
 .mes-main i {
     padding-top:20px ;
     font-size: 30px;
+    color: black;
 }
 .mes-text {
-    width: 99%;
+    width: 100%;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -158,11 +163,16 @@
     padding: 15px 20px;
     border: none;
     width: 100%;
+    background: none;
 
 }
 .ip-text {
     padding: 5px 20px;
-    width: 100%;
+    width: 70%;
+    /* background:none; */
+}
+.ip-text input:focus{
+    outline: none;
 }
 .mes-icon {
     width: 15%;

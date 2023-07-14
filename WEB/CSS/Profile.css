@@ -137,7 +137,6 @@ div.infor div.setting{
 }
 .bg-top {
     background-color: rgba(204, 239, 239, 0.7);
-    /* width: 100px; */
     position: absolute;
     top: 0;
     left: 0;
@@ -145,15 +144,16 @@ div.infor div.setting{
     bottom: 0;
     display: none;
 }
-.bg-top span{
-    /* margin-top: 40%; */
-    margin-left: 35%;
+.bg-top > div {
+    margin:40% 35%;
 }
-.bg-top i{
-    /* color: black; */
+.bg-top > div > div{
+    padding-right: 10px;
+}
+.bg-top div i{
     color: black;
     font-size: 50px;
-    padding: 5px;
+    /* padding: 5px; */
     cursor: pointer;
     margin-top: 40%;
 }

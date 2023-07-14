@@ -12,179 +12,196 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
     </style>
+    <!-- <link rel="stylesheet" href="/CSS/Header.css"> -->
     <link rel="stylesheet" href="/CSS/Header.css">
     <link rel="stylesheet" href="/CSS/Home.css">
     <script src="/JS/Home.js"></script>
     <title>MY WEB</title>
 </head>
 <body>
-    <header class="header flex">
-        <div class="search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-search" >
-        </div>
-        <!-- trang cá nhân -->
-        <div class="myProfile flex">
-            <div class="myImg">
-                <a href="/HTML/Profile.html">
-                    <img src="/IMG/dht.jpg" alt="">
-                </a>
-            </div>  
-            <div class="myName">
-                <a href="/HTML/Profile.html">
-                    <div class="fname">
-                        <h3>dh.Thanh</h3>
-                    </div>
-                    <div class="lname">
-                        <h4>Duong Huu Thanh</h4>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </header>
-    <main class="flex">
-        <div class="menu">
-            <nav class="flex">
+    <div class="flex">
+        <header class="h_header">
+            <nav class="flex menu">
                 <ul>
                     <li>
                         <div class="name">
                             <a href="#">
-                                <h1>NAME</h1>
+                                <img src="/IMG/Logo.png" alt="LOGO">
                             </a>
                         </div>
                      </li>
                     <li>
                         <a href="/HTML/Home.html">
                             <i class="fa-solid fa-house"></i> 
-                            <span>TRANG CHU</span>
+                            <span>TRANG CHỦ</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa-regular fa-compass"></i>
-                            <span>KHAM PHA</span>
+                            <span>KHÁM PHÁ</span>
                         </a>
                     </li>
                     <li>
                        <a href="/HTML/Mesenge.html">
                             <i class="fa-regular fa-comment-dots"></i> 
-                            <span>TIN NHAN</span>
+                            <span>TIN NHẮN</span>
                        </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa-regular fa-bell"></i> 
-                            <span>THONG BAO</span>
+                            <span>THÔNG BÁO</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa-regular fa-square-plus"></i> 
-                            <span>TAO TIN</span>
+                            <span>TẠO TIN</span>
                         </a>
                     </li>
                 </ul>
             </nav>
-        </div>
-        
-        <section class="h-content">
-            <div class="tab-story">
-                <ul class="stories flex" id="stories">
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="story">
-                        <a href="#">
-                            <div class="story-img">
-                                <img src="/IMG/dht.jpg" alt="ảnh">
-                            </div>
-                            <div class="story-name">
-                                <span>duonghuuthanh</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <button class="btn left" onclick="changeLeft()">
-                    <i class="fa-solid fa-circle-chevron-left" ></i>
-                </button>
-                <button class="btn right " onclick="changeRight()">
-                    <i class="fa-solid fa-circle-chevron-right" ></i>
-                </button>
-            </div>
-            
-        </section>
+                
+        </header>
+    
+        <main class="h_main">
+            <div class="flex" style="margin-top: 10px;">
+                <section id="m-center">
+                    <div style="margin: 3%;">
+                        <div  class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-search" >
+                        </div>
+                    </div>
 
-        <section class="friend">
+                    <div class="h-content">
+                        <div class="tab-story">
+                            <ul class="stories flex" id="stories">
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="story">
+                                    <a href="#">
+                                        <div class="story-img">
+                                            <img src="/IMG/dht.jpg" alt="ảnh">
+                                        </div>
+                                        <div class="story-name">
+                                            <span>duonghuuthanh</span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <button class="btn left" onclick="changeLeft()">
+                                <i class="fa-solid fa-circle-chevron-left" ></i>
+                            </button>
+                            <button class="btn right " onclick="changeRight()">
+                                <i class="fa-solid fa-circle-chevron-right" ></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div>
+                        trang chủ
+                    </div>
+                </section>
+
+                <section id="m-right">
+                    <!-- trang cá nhân  -->
+                    <div class="myProfile flex">
+                        <div class="myImg">
+                            <a href="/HTML/Profile.html">
+                                <img src="/IMG/dht.jpg" alt="">
+                            </a>
+                        </div>  
+                        <div class="myName">
+                            <a href="/HTML/Profile.html">
+                                <div class="fname">
+                                    <h3>dh.Thanh</h3>
+                                </div>
+                                <div class="lname">
+                                    <h4>Duong Huu Thanh</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="myFriend">
+                        ds bạn
+                    </div>
+                </section>
+            </div> 
+
             
-        </section>
-    </main>
-    <footer></footer>
+
+        </main>
+    </div>
+  
 </body>
 </html>
