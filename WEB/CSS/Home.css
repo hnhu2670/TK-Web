@@ -1,39 +1,45 @@
-
-
 /* giữa */
-#m-center{
+#m-center {
     width: 75%;
 }
-#m-center > div{
+
+#m-center>div {
     margin: 0px auto;
 }
+
 /* nút tìm kiếm */
-.search{
+.search {
     border: 1px solid black;
     width: 70%;
     padding: 15px;
     border-radius: 20px;
     margin: 0px auto;
 }
-input#ip-search{
-    border: none ;
+
+input#ip-search {
+    border: none;
     font-size: 17px;
     width: 90%;
     background: none;
 }
-input#ip-search:focus{
+
+input#ip-search:focus {
     outline: none;
 }
+
 /* trang nội dung chính */
-.h-content{
+.h-content {
     width: 100%;
 }
-.tab-story{
+
+.tab-story {
     width: 95%;
     margin: 10px auto;
     padding: 10px;
     position: relative;
 }
+
+
 .tab-story ul.stories {
     list-style-type: none;
     align-items: stretch;
@@ -41,19 +47,27 @@ input#ip-search:focus{
     height: 100%;
     position: relative;
     overflow-x: auto;
-    overflow-y: hidden; 
+    overflow-y: hidden;
+    transition: left 1s;
+    /*hiếu thêm*/
+    left: -4px;
 }
-ul.stories::-webkit-scrollbar{
+
+ul.stories::-webkit-scrollbar {
     display: none;
 }
+
 .tab-story ul.stories li.story {
     width: 100%;
     height: 100%;
     margin: 0 10px;
+
 }
-li.story a{
+
+li.story a {
     text-decoration: none;
 }
+
 .story-img {
     width: 90px;
     height: 90px;
@@ -61,67 +75,78 @@ li.story a{
     padding: 3px;
     margin-bottom: 10px;
     margin-left: 20px;
-    background:linear-gradient(gold,rgb(126, 17, 126),red);
+    background: linear-gradient(gold, rgb(126, 17, 126), red);
+    position: relative;
+    transition: all 1s;
 }
-.story-img img{
+
+.story-img img {
     width: 96%;
-    height:96%;
+    height: 96%;
     border-radius: 50%;
     border: 2px solid white;
     object-fit: cover;
 
 }
+
 .story-name {
     text-align: center;
     margin-bottom: 10px;
 }
 
 .btn {
-    position:absolute;
+    position: absolute;
     font-size: 30px;
     border: none;
     background: none;
     cursor: pointer;
 }
 
-.left{
+.left {
     top: 40px;
-    left:20px;
+    left: 20px;
 }
-.right{
+
+.right {
     top: 40px;
-    right:20px;
-} 
+    right: 20px;
+}
 
 /* myProfile */
-#m-right{
+#m-right {
     width: 30%;
 }
+
 .myProfile {
-    width:100%;
+    width: 100%;
     height: 100px;
     margin-bottom: 15px;
 }
+
 .myImg {
     width: 25%;
     border-radius: 50%;
     padding-right: 20px;
 }
-.myImg img{
+
+.myImg img {
     width: 100%;
     border-radius: 50%;
 }
+
 .myName {
     padding-top: 20px;
 }
-.myName a{
+
+.myName a {
     text-decoration: none;
-} 
+}
+
 .myFriend {
     background-color: blue;
 }
 
-/* * thông báo */ 
+/* * thông báo */
 
 .note {
     position: absolute;
@@ -136,45 +161,155 @@ li.story a{
     z-index: -111;
     overflow: hidden;
 }
-.notes:hover .note{
+
+.notes:hover .note {
     /* left: 100%; */
     opacity: 1;
     width: 500px;
 }
 
 /* bài viết */
-.h-center{
+.h-center {
     width: 100%;
     /* background-color: antiquewhite; */
 }
+
 .list-news {
     width: 70%;
     margin: 20px auto;
     padding: 20px;
     background-color: gainsboro;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     border-radius: 10px;
+    display: block;
+    opacity: 1;
+    transition: opacity 2s;
 
 }
-.n-name .myImg{
+
+.n-name .myImg {
     width: 10%;
 }
+
 .close {
     margin-left: auto;
     cursor: pointer;
 }
+
 .close i {
     font-size: 40px;
 }
+
 .n-infor {
     width: 100%;
 }
-.n-infor img{
+
+.n-infor img {
     width: 100%;
     padding: 10px 0px;
 }
-.n-heart > div > i{
+
+.n-heart>div>i {
     font-size: 40px;
     margin-right: 20px;
+}
+
+/*Hiếu Thêm*/
+
+/*thêm*/
+.tab-story {
+    overflow: hidden;
+}
+
+/*thêm*/
+.story-img img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.friend {
+    margin-top: 5px;
+}
+
+.friendss {
+    margin-top: 120%
+}
+/* 
+section.friend {
+    width: 20%;
+    margin-top: 20%;
+} */
+
+.friends {
+    width: auto;
+
+}
+
+.friends>ul>li {
+    list-style-type: none;
+
+}
+
+div.friend>a {
+    display: flex;
+    text-decoration: none;
+    margin: 5px;
+}
+
+div.friend-img {
+    position: relative;
+}
+
+div.friend-img>img {
+    width: 100%;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: linear-gradient(gold, rgb(126, 17, 126), red);
+    transition: all 1s;
+}
+
+div.friend-img>img:hover {
+    transform: scale(1.2, 1.2);
+
+}
+
+div.friend-name {
+    text-align: center;
+
+}
+
+div.friend-name>span {
+    justify-content: center;
+    /* position: absolute; */
+    top: 15%;
+    left: 50%;
+}
+
+div.online {
+    margin: 2px;
+    display: flex;
+    background-color: lightblue;
+}
+
+div.online > h3 {
+    margin: 0;
+}
+
+div.online>div {
+    margin-left: auto;
+    justify-content: center;
+}
+
+div.online>div {
+    display: flex;
+    /* border: 2px solid black;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 30px;
+    margin-left: 25%; */
+}
+
+div.n-heart {
+    cursor: pointer;
 }

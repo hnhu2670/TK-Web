@@ -18,7 +18,7 @@
     <script src="/JS/Home.js"></script>
     <title>MY WEB</title>
 </head>
-<body>
+<body onload="load_friends(); load_news();">
     <div class="flex">
         <header class="h_header">
             <nav class="flex menu">
@@ -112,6 +112,7 @@
                                         </div>
                                     </a>
                                 </li>
+                                
                                 <li class="story">
                                     <a href="#">
                                         <div class="story-img">
@@ -172,83 +173,11 @@
                         </div>
                     </div>
 
-                    <div class="h-center">
-                       <div class="list-news">
-                            <div class="n-name flex">
-                                <div class="myImg">
-                                    <a href="/HTML/Profile.html">
-                                        <img src="/IMG/dht.jpg" alt="">
-                                    </a>
-                                </div>  
-                                <div class="myName">
-                                    <a href="/HTML/Profile.html">
-                                            <h3>dh.Thanh</h3>
-                                    </a>
-                                </div>
-                                <div class="close">
-                                    <i class="fa-solid fa-xmark"></i>                                
-                                </div>
-                            </div>
-                            <div class="n-infor">
-                                <div>
-                                    <p>Dạo này có nhiều rắc rối liên quan đến phim ảnh và đường lưỡi bò khiến ai cũng ngán ngẩm rồi, nay mình cùng nói về một bộ phim điện ảnh hiếm hoi nói tốt về Việt Nam được sản xuất bởi Hollywood. Đó là No Escape, phát hành năm 2015, được đạo diễn bởi John Erick Dowdle, có sự tham gia của tài tử từng đoạt giải Quả cầu vàng Owen Wilson và diễn viên từng đóng James Bond là Pierce Brosnan. </p>
-                                </div>
-                                <div class="n-img">
-                                    <img src="/IMG/profile/cat1.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="n-heart flex">
-                                <div class="heart">
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div class="comment">
-                                    <i class="fa-regular fa-comment"></i>
-                                </div>
-                                <div class="share">
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                </div>
-                            </div>
-                       </div>
-                       <div class="list-news">
-                        <div class="n-name flex">
-                            <div class="myImg">
-                                <a href="/HTML/Profile.html">
-                                    <img src="/IMG/dht.jpg" alt="">
-                                </a>
-                            </div>  
-                            <div class="myName">
-                                <a href="/HTML/Profile.html">
-                                        <h3>dh.Thanh</h3>
-                                </a>
-                            </div>
-                            <div class="close">
-                                <i class="fa-solid fa-xmark"></i>                                
-                            </div>
-                        </div>
-                        <div class="n-infor">
-                            <div>
-                                <p>Dạo này có nhiều rắc rối liên quan đến phim ảnh và đường lưỡi bò khiến ai cũng ngán ngẩm rồi, nay mình cùng nói về một bộ phim điện ảnh hiếm hoi nói tốt về Việt Nam được sản xuất bởi Hollywood. Đó là No Escape, phát hành năm 2015, được đạo diễn bởi John Erick Dowdle, có sự tham gia của tài tử từng đoạt giải Quả cầu vàng Owen Wilson và diễn viên từng đóng James Bond là Pierce Brosnan. </p>
-                            </div>
-                            <div class="n-img">
-                                <img src="/IMG/profile/cat1.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="n-heart flex">
-                            <div class="heart">
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div class="comment">
-                                <i class="fa-regular fa-comment"></i>
-                            </div>
-                            <div class="share">
-                                <i class="fa-regular fa-paper-plane"></i>
-                            </div>
-                        </div>
-                   </div>
+                    <div class="h-center" id="h-load-news">
+                       
                     </div>
                 </section>
-
-                <section id="m-right">
+                <div id="m-right">
                     <!-- trang cá nhân  -->
                     <div class="myProfile flex">
                         <div class="myImg">
@@ -267,10 +196,30 @@
                             </a>
                         </div>
                     </div>
-                    <div class="myFriend">
-                        ds bạn
+                    <!-- Danh sách bạn bè load từ file json  -->
+                    <div class="friendss">
+                        <div class="online">
+                            <h3>Online</h3>
+                            <div>
+                                <div>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                                
+                                <input onchange="find_friends(this)" id="fname" type="text" placeholder="Nhập tên bạn bè......" >
+                            </div>
+                        </div>
+                        <div class="friends">
+                            <ul>
+                                <li class="friend1">
+                                    <div id="frie"> 
+
+
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </section>
+                </div>
             </div> 
 
             
