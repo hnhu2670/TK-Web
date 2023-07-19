@@ -33,7 +33,6 @@ input#ip-search:focus{
     margin: 10px auto;
     padding: 10px;
     position: relative;
-    border: 2px dashed black;
 }
 .tab-story ul.stories {
     list-style-type: none;
@@ -120,4 +119,62 @@ li.story a{
 } 
 .myFriend {
     background-color: blue;
+}
+
+/* * thông báo */ 
+
+.note {
+    position: absolute;
+    background-color: aqua;
+    width: 0px;
+    top: 0px;
+    right: 0px;
+    left: 100%;
+    bottom: 0px;
+    transition: width 4s;
+    opacity: 0;
+    z-index: -111;
+    overflow: hidden;
+}
+.notes:hover .note{
+    /* left: 100%; */
+    opacity: 1;
+    width: 500px;
+}
+
+/* bài viết */
+.h-center{
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+.list-news {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: gainsboro;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    border-radius: 10px;
+
+}
+.n-name .myImg{
+    width: 10%;
+}
+.close {
+    margin-left: auto;
+    cursor: pointer;
+}
+.close i {
+    font-size: 40px;
+}
+.n-infor {
+    width: 100%;
+}
+.n-infor img{
+    width: 100%;
+    padding: 10px 0px;
+}
+.n-heart > div > i{
+    font-size: 40px;
+    margin-right: 20px;
 }

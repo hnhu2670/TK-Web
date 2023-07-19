@@ -7,10 +7,57 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
     </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
     <link rel="stylesheet" href="/CSS/Header.css">
     <link rel="stylesheet" href="/CSS/Profile.css">
     <script src="/JS/Profile.js"></script>
     <title>MY WEB</title>
+
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(()=>{
+                if($(this).scrollTop()>=500)
+                    $("#name").css({
+                        "position":"fixed",
+                        "top":0,
+                        "width":"89%",
+                        "z-index":999,
+                        "padding":"15px",
+                        "margin":"0 auto",
+                        "background-color":"lightblue"
+                        
+                    }),
+                    $(".avatar").css({
+                        "width":"7%",
+
+                    }),
+                    $(".avatar img").css({
+                        "margin":"1px",
+
+
+                    })
+                else {
+                    $("#name").css({
+                        "position":"absolute",
+                        "width":"75%",
+                        "margin":"0 auto",
+                        
+                    }),
+                    $(".avatar").css({
+                        "width":"15%",
+
+                    }),
+                    $(".avatar img").css({
+                        "margin-top": "-50px"
+
+
+                    })
+                }
+                    
+            });
+        })
+    </script>
 </head>
 <body>
     <header class="h_header header">
@@ -29,7 +76,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/HTML/Discover.html">
                         <i class="fa-regular fa-compass"></i>
                     </a>
                 </li>
@@ -39,7 +86,7 @@
                    </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/HTML/Notification.html">
                         <i class="fa-regular fa-bell"></i> 
                     </a>
                 </li>
@@ -58,7 +105,7 @@
                 <div class="img">
                     <img src="" alt="nền">
                 </div>
-                <div class="name flex">
+                <div class="name flex" id="name">
                     <div class="avatar">
                         <img src="/IMG/avatar.jpg" alt="avatar">
                     </div>
@@ -91,20 +138,19 @@
                         <li><a href="#">ĐƯỢC GẮN THẺ</a></li>
                     </ul>
                 </div>
-                <div class="box">
+                <!-- <div class="box">
                     
-                </div>
+                </div> -->
                 <div class="items flex">
-                    
                     <div class="item">
                         <img src="/IMG/profile/cat1.jpg" alt="">
                         <div class="bg-top ">
-                            <div class="flex">
-                                <div>
-                                    <i class="fa-solid fa-heart icon-heart" ></i>
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart"></i>
                                 </div>
-                                <div>
-                                    <i class="fa-regular fa-paper-plane icon-plane"></i>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
                                 </div>
                             </div>
                             
@@ -117,12 +163,64 @@
                     <div class="item">
                         <img src="/IMG/profile/cat2.jpg" alt="">
                         <div class="bg-top">
-                            <div class="flex">
-                                <div>
-                                    <i class="fa-solid fa-heart icon-heart" ></i>
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
                                 </div>
-                                <div>
-                                    <i class="fa-regular fa-paper-plane icon-plane"></i>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat2.jpg" alt="">
+                        <div class="bg-top">
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
+                                </div>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat2.jpg" alt="">
+                        <div class="bg-top">
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
+                                </div>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat2.jpg" alt="">
+                        <div class="bg-top">
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
+                                </div>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat2.jpg" alt="">
+                        <div class="bg-top">
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
+                                </div>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
                                 </div>
                             </div>
                         </div>
@@ -130,12 +228,12 @@
                     <div class="item">
                         <img src="/IMG/profile/cat3.jpg" alt="">
                         <div class="bg-top">
-                            <div class="flex">
-                                <div>
-                                    <i class="fa-solid fa-heart icon-heart" ></i>
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
                                 </div>
-                                <div>
-                                    <i class="fa-regular fa-paper-plane icon-plane"></i>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
                                 </div>
                             </div>
                         </div>
@@ -143,38 +241,65 @@
                     <div class="item">
                         <img src="/IMG/profile/cat4.jpg" alt="">
                         <div class="bg-top">
-                            <div class="flex">
-                                <div>
-                                    <i class="fa-solid fa-heart icon-heart" ></i>
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
                                 </div>
-                                <div>
-                                    <i class="fa-regular fa-paper-plane icon-plane"></i>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="item">
                         <img src="/IMG/profile/cat5.jpg" alt="">
                         <div class="bg-top">
-                            <div class="flex">
-                                <div>
-                                    <i class="fa-solid fa-heart icon-heart" ></i>
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
                                 </div>
-                                <div>
-                                    <i class="fa-regular fa-paper-plane icon-plane"></i>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="item">
-                        <img src="/IMG/profile/cat1.jpg" alt="">
+                        <img src="/IMG/profile/cat6.jpg" alt="">
                         <div class="bg-top">
-                            <div class="flex">
-                                <div>
-                                    <i class="fa-solid fa-heart icon-heart" ></i>
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
                                 </div>
-                                <div>
-                                    <i class="fa-regular fa-paper-plane icon-plane"></i>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat7.jpg" alt="">
+                        <div class="bg-top">
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
+                                </div>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="/IMG/profile/cat8.jpg" alt="">
+                        <div class="bg-top">
+                            <div class="flex icon">
+                                <div class="icon-heart">
+                                    <i class="fa-solid fa-heart " ></i>
+                                </div>
+                                <div class="icon-share">
+                                    <i class="fa-regular fa-paper-plane "></i>
                                 </div>
                             </div>
                         </div>

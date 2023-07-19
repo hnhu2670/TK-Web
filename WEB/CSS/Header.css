@@ -2,18 +2,18 @@
     padding: 0;
     margin: 0;
     font-family: 'Jura', sans-serif;
-    color: black;
+    color:navy;
 }
 
 body{
     /* margin: 0px 25px; */
     padding: 0 20px;
-    /* background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%) */
+    background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)
     
     /* background-image: linear-gradient(to right, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%); */
     /* background-image: linear-gradient(to right, #accbee 0%, #e7f0fd 100%) */
     /* background-image: linear-gradient(to right, #a3bded 0%, #6991c7 100%); */
-    background-image: linear-gradient(60deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    /* background-image: linear-gradient(60deg, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
 }
 .flex {
     display: flex;
@@ -64,7 +64,7 @@ nav.menu ul li i{
 }
 
 /* logo */
-.name{
+nav.menu .name{
     width: 100%;
     height: 150px;
 }
@@ -83,3 +83,4 @@ nav.menu ul li i{
 .main{
     margin-left: 7% !important;
 }
+

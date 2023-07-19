@@ -33,7 +33,7 @@
 div.avatar {
     width: 15%;
     border-radius: 50%;
-    border: 3px solid white;
+    /* border: 3px solid white; */
     /* margin-right: 20px; */
 }
 div.avatar img {
@@ -90,8 +90,7 @@ div.infor div.setting{
     font-size: 25px;
 }
 .menu-top ul li{
-    /* margin: 10px; */
-    /* background-color: blue; */
+
     padding: 10px;
     display: block;
 }
@@ -102,10 +101,9 @@ div.infor div.setting{
     border-top: 5px solid gray;
 }
 .items {
-    /* margin-top: 20px; */
     width: 100%;
     flex-wrap: wrap;
-    /* background-color: blue; */
+    /* margin: 10px; */
 }
 /*
 .box{
@@ -122,12 +120,10 @@ div.infor div.setting{
 
 }*/
 .item {
-    width: 33%;
-    height: 370px;
-    margin: 10px auto;
-    /* margin-bottom: 5px; */
+    width: 24%;
+    height:270px;
+    margin: 5px auto;
     position: relative;
-    /* border-radius: 5px; */
 }
 .item img{
     width: 100%;
