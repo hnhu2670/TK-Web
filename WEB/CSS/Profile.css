@@ -1,8 +1,5 @@
 /* <!-- ảnh đại diện - ảnh bìa --> */
-*{
-    padding: 0;
-    margin:0;
-}
+
 .content {
     background-color: #f0f2f5;
 
@@ -156,4 +153,23 @@ div.infor div.setting{
 
 .item:hover .bg-top{
     display: block;
+}
+
+.sub {
+    width: 100%;
+    align-items:center;
+    position: absolute;
+    top: 0;
+    background-color: #f0f2f5;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+.sub .avatar{
+    width:4%;
+    margin:0 30px 0 12%;
+}
+.sub .avatar img{
+    width: 100%;
+    margin: 0;
 }

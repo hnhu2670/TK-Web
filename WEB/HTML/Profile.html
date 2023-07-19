@@ -16,48 +16,7 @@
     <title>MY WEB</title>
 
     <script>
-        $(document).ready(function(){
-            $(window).scroll(()=>{
-                if($(this).scrollTop()>=500)
-                    $("#name").css({
-                        "position":"fixed",
-                        "top":0,
-                        "width":"89%",
-                        "z-index":999,
-                        "padding":"15px",
-                        "margin":"0 auto",
-                        "background-color":"lightblue"
-                        
-                    }),
-                    $(".avatar").css({
-                        "width":"7%",
-
-                    }),
-                    $(".avatar img").css({
-                        "margin":"1px",
-
-
-                    })
-                else {
-                    $("#name").css({
-                        "position":"absolute",
-                        "width":"75%",
-                        "margin":"0 auto",
-                        
-                    }),
-                    $(".avatar").css({
-                        "width":"15%",
-
-                    }),
-                    $(".avatar img").css({
-                        "margin-top": "-50px"
-
-
-                    })
-                }
-                    
-            });
-        })
+        
     </script>
 </head>
 <body>
@@ -127,7 +86,18 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                <div class="sub-Profile ">
+                    <div class="sub flex">
+                        <div class="avatar">
+                            <img src="/IMG/avatar.jpg" alt="avatar">
+                        </div>
+                        <div class="fname">
+                            <h2>--pcc--</h2>
+                        </div>
+                    </div>
+                    
+    
+                </div>
 
             </div>
                 <!-- <nội dung trang cá nhân --> 

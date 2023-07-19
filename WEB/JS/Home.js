@@ -121,45 +121,45 @@ function load_news() {
             for (i of data) {
                 
                 d.innerHTML +=
-`<div class="list-news" id="list-news1">
-    <div class="n-name flex">
-        <div class="myImg">
-            <a href="/HTML/Profile.html">
-                <img src="${i.image}" alt="">
-            </a>
-        </div>
-        <div class="myName">
-            <a href="/HTML/Profile.html">
-                <h3>${i.name}</h3>
-            </a>
-        </div>
-        <div class="close">
-            <i class="fa-solid fa-xmark" onclick="hide_news(this)"></i>
-        </div>
-    </div>
-    <div class="n-infor">
-        <div>
-            <p>${i.content} </p>
-        </div>
-        <div class="n-img">
-            <img src="${i.content_img}" alt="">
-        </div>
-    </div>
-    <div class="n-heart flex">
-        <div class="heart">
-            <i class="fa-regular fa-heart" onclick="heart(this)"></i>
-        </div>
-        <div class="comment">
-            <i class="fa-regular fa-comment"></i>
-        </div>
-        <div class="share">
-            <i class="fa-regular fa-paper-plane"></i>
-        </div>
-    </div>
-</div>`
+            `<div class="list-news" id="list-news1">
+                <div class="n-name flex">
+                    <div class="myImg">
+                        <a href="/HTML/Profile.html">
+                            <img src="${i.image}" alt="">
+                        </a>
+                    </div>
+                    <div class="myName">
+                        <a href="/HTML/Profile.html">
+                            <h3>${i.name}</h3>
+                        </a>
+                    </div>
+                    <div class="close">
+                        <i class="fa-solid fa-xmark" onclick="hide_news(this)"></i>
+                    </div>
+                </div>
+                <div class="n-infor">
+                    <div>
+                        <p>${i.content} </p>
+                    </div>
+                    <div class="n-img">
+                        <img src="${i.content_img}" alt="">
+                    </div>
+                </div>
+                <div class="n-heart flex">
+                    <div class="heart">
+                        <i class="fa-regular fa-heart" onclick="heart(this)"></i>
+                    </div>
+                    <div class="comment">
+                        <i class="fa-regular fa-comment"></i>
+                    </div>
+                    <div class="share">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                </div>
+            </div>`
+                        }
+                    })
             }
-        })
-}
 
 
 function hide_news(obj){
@@ -172,6 +172,28 @@ function hide_news(obj){
     }, 2000);
 };
 
+// mới
+
+$(window).on("load", () => {
+    $(document).ready(function(){
+        $("#go").hide()
+        $(window).scroll(()=>{
+            if($(this).scrollTop()>=300){
+                $("#go").show()}   
+            else {
+                $("#go").hide()
+            }
+        })
+    
+        $("#go").click(function(){
+            $("html,body").animate({
+                scrollTop:0
+            },1000)
+    })
+    })  });
+  
+// gototop
+ 
 
 
 

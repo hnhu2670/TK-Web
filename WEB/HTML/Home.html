@@ -13,12 +13,35 @@
         @import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
     </style>
     <!-- <link rel="stylesheet" href="/CSS/Header.css"> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="/CSS/Header.css">
     <link rel="stylesheet" href="/CSS/Home.css">
     <script src="/JS/Home.js"></script>
     <title>MY WEB</title>
+
+    <script>
+        // $(document).ready(function(){
+        //     $("#go").hide()
+        //     $(window).scroll(()=>{
+        //         if($(this).scrollTop()>=300){
+        //             $("#go").show()}   
+        //         else {
+        //             $("#go").hide()
+        //         }
+        // })
+
+        //     $("#go").click(function(){
+        //         $("html,body").animate({
+        //             scrollTop:0
+        //         },1000)
+        //     })
+        // })
+    </script>
 </head>
 <body onload="load_friends(); load_news();">
+    <div id="go">
+        <a href="javascript:;"><i class="fa-solid fa-chevron-up"></i></a>
+    </div>
     <div class="flex">
         <header class="h_header">
             <nav class="flex menu">
@@ -172,7 +195,7 @@
                             </button>
                         </div>
                     </div>
-
+                    <!-- load tin -->
                     <div class="h-center" id="h-load-news">
                        
                     </div>

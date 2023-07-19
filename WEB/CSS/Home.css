@@ -231,7 +231,10 @@ li.story a {
 }
 
 .friendss {
-    margin-top: 120%
+    margin-top: 15%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 5%;
 }
 /* 
 section.friend {
@@ -287,29 +290,42 @@ div.friend-name>span {
 }
 
 div.online {
-    margin: 2px;
+    margin: 5px;
     display: flex;
-    background-color: lightblue;
+    /* background-color: lightblue; */
 }
 
 div.online > h3 {
-    margin: 0;
-}
-
-div.online>div {
-    margin-left: auto;
-    justify-content: center;
+    margin: 0 0 5px 0;
+    font-size: 25px;
 }
 
 div.online>div {
     display: flex;
+    margin-left: auto;
+    margin-right: 5px;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 15px;
+    
+}
+div.online>div > div>i{
+    text-align: center;
+    padding-top: 5px;
+}
+div.online>div input{
     /* border: 2px solid black;
     width: 40%;
     border: 1px solid black;
     border-radius: 30px;
     margin-left: 25%; */
+    background:none;
+    border: none;
 }
-
+div.online>div input:focus{
+    outline: none;   
+}
 div.n-heart {
     cursor: pointer;
 }

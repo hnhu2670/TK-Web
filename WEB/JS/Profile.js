@@ -8,3 +8,30 @@ function init(){
         }
     
 }
+
+$(window).on("load", function() {
+    $(document).ready(function(){
+              
+        $(".sub").hide()
+    
+        $(window).scroll(()=>{
+            if($(this).scrollTop()>=600)
+            {
+                $(".sub").show()
+    
+                // $(".sub").slideDown(500)
+                $(".sub").css({
+                    "position":"fixed",
+                    "z-index":9999
+                })
+                $(".sub-Profile").css({
+                    "background-color":"blue",
+    
+                })
+            }
+            else{
+                $(".sub").hide()
+            }
+        })
+    })
+  });
