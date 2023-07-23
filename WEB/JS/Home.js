@@ -78,24 +78,22 @@ function find_friends(obj) {
                 if (namet.search(namef) > -1) {
                     a.innerHTML +=
                         `<div class="friend">
-            <a href="#">
-            <div class="friend-img">
-                <img src="${i.img}" id="img-fr" alt="ảnh"> 
-            </div>
-        
-            <div class="friend-name">
-                <span id="name-fr">${i.name}</span>
-            </div>
-            </a>
-            </div>`
+                            <a href="#">
+                                <div class="friend-img">
+                                    <img src="${i.img}" id="img-fr" alt="ảnh"> 
+                                </div>
+                            
+                                <div class="friend-name">
+                                    <span id="name-fr">${i.name}</span>
+                                </div>
+                            </a>
+                            
+                        </div>`
                 }
-
             }
         });
 
 };
-
-
 
 function heart(obj) {
     let a = obj;
@@ -138,12 +136,14 @@ function load_news() {
                     </div>
                 </div>
                 <div class="n-infor">
-                    <div>
+                    <div class="box">
                         <p>${i.content} </p>
                     </div>
+                    <button class="btn-more" onclick = click_more(this)>Xem thêm</button>
+                    <button class="btn-less" onclick = click_less(this)>Rút gọn</button>
                     <div class="n-img">
                         <img src="${i.content_img}" alt="">
-                    </div>
+                    </div> 
                 </div>
                 <div class="n-heart flex">
                     <div class="heart">
@@ -172,7 +172,7 @@ function hide_news(obj){
     }, 2000);
 };
 
-// mới
+// gototop
 
 $(window).on("load", () => {
     $(document).ready(function(){
@@ -192,8 +192,51 @@ $(window).on("load", () => {
     })
     })  });
   
-// gototop
- 
+// như thêm
+    //nút xem thêm
+    // function load_btn()
+    // {
+    //     let box = document.querySelectorAll(".box")
+    //     console.log(box.length)
+    //     for(let i=0;i<box.length;i++)
+    //     {
+    //         let more = box[i].querySelector(".btn-more")
+    //         alert(more)
+    //         // if(box[i].scrollHeight >=100)
+    //         //     more.style.display="block"
+    //         // else
+    //         //     more.style.display="none"
+    //     }
+    // }
+
+    //nút xem thêm 
+    function click_more(obj)
+    {
+        let btn =obj
+        //alert("hello")
+        let par = btn.parentNode
+        //console.log(par)
+        let child = par.querySelector(".box")
+        let btn_less = par.querySelector(".btn-less")
+        // console.log(child)
+        child.style.maxHeight="none"
+        btn.style.display ="none"
+        btn_less.style.display ="block"
+    }
+
+    //nút rút gọn
+    function click_less(obj)
+    {
+        let btn = obj
+        let par = btn.parentNode
+        //console.log(par)
+        let child = par.querySelector(".box")
+        let btn_more = par.querySelector(".btn-more")
+        child.style.maxHeight="100px"
+        btn.style.display ="none"
+        btn_more.style.display ="block"
+    }
+
 
 
 

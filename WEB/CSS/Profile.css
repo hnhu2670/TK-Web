@@ -99,8 +99,9 @@ div.infor div.setting{
 }
 .items {
     width: 100%;
+    padding-bottom: 20px;
     flex-wrap: wrap;
-    /* margin: 10px; */
+    
 }
 /*
 .box{
@@ -118,7 +119,7 @@ div.infor div.setting{
 }*/
 .item {
     width: 24%;
-    height:270px;
+    height:320px;
     margin: 5px auto;
     position: relative;
 }

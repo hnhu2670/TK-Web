@@ -1,14 +1,25 @@
-[
-        {
-            "id": 1,
-            "img":"/IMG/profile/cat2.jpg"
-        },
-        {
-            "id": 2,
-            "img":"/IMG/profile/cat3.jpg"
-        },
-        {
-            "id": 3,
-            "img":"/IMG/profile/cat1.jpg"
-        }
-    ]
+[{
+    "img":"/IMG/profile/cat1.jpg"
+},{
+    "img":"/IMG/profile/cat2.jpg"
+},{
+    "img":"/IMG/profile/cat3.jpg"
+},{
+    "img":"/IMG/profile/cat4.jpg"
+},{
+    "img":"/IMG/profile/cat5.jpg"
+},{
+    "img":"/IMG/profile/cat6.jpg"
+},{
+    "img":"/IMG/profile/cat7.jpg"
+},{
+    "img":"/IMG/profile/cat8.jpg"
+},{
+    "img":"/IMG/profile/cat1.jpg"
+},{
+    "img":"/IMG/profile/cat10.jpg"
+},{
+    "img":"/IMG/profile/cat4.jpg"
+},{
+    "img":"/IMG/profile/cat7.jpg"
+}]

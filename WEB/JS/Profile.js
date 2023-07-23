@@ -35,3 +35,32 @@ $(window).on("load", function() {
         })
     })
   });
+
+  function load_item() {
+    let c = document.getElementById("items");
+    c.innerHTML = "";
+
+    fetch(`/JSON/items.json`)
+        .then((res) => {
+            return res.json();
+        }).then((data) => {
+            let d = document.getElementById("items");
+            for (i of data) {
+                
+                d.innerHTML +=
+            `<div class="item">
+                <img src="${i.img}" alt="">
+                <div class="bg-top ">
+                    <div class="flex icon">
+                        <div class="icon-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="icon-share">
+                            <i class="fa-regular fa-paper-plane "></i>
+                        </div>
+                    </div>
+                </div>
+            </div>`
+                        }
+                    })
+            }
