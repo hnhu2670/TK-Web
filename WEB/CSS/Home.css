@@ -49,11 +49,11 @@ input#ip-search:focus {
     position: relative;
     overflow-x: auto;
     overflow-y: hidden;
-    /* transition: transform 3s; */
+    transition: left 2s;
     /*hiếu thêm*/
     left: -4px;
     /* scroll-behavior: auto; */
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 
 
@@ -145,9 +145,11 @@ li.story a {
 .myName {
     padding-top: 20px;
 }
-.myName h3{
+
+.myName h3 {
     font-size: 35px;
 }
+
 .myName a {
     text-decoration: none;
 }
@@ -172,7 +174,7 @@ li.story a {
     overflow: hidden;
 }
 
-.notes:hover .note{
+.notes:hover .note {
     opacity: 1;
     width: 400px;
 }
@@ -181,8 +183,8 @@ li.story a {
     text-align: center;
     /* width:1rem; */
     padding: 0;
-    margin-top: 0!important;
-    margin-bottom: 0!important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
     border: 2px;
 }
 
@@ -213,7 +215,8 @@ li.story a {
     background-color: lightblue;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    display: none; /*sửa khi hoàn xóa*/
+    display: none;
+    /*sửa khi hoàn xóa*/
     opacity: 0;
     transition: opacity 2s;
 
@@ -275,6 +278,7 @@ li.story a {
     overflow-y: auto;
     height: 650px;
 }
+
 /* 
 section.friend {
     width: 20%;
@@ -327,7 +331,7 @@ div.online {
     /* background-color: lightblue; */
 }
 
-div.online > h3 {
+div.online>h3 {
     margin: 0 0 5px 0;
     font-size: 25px;
 }
@@ -340,47 +344,54 @@ div.online>div {
     border: 1px solid black;
     padding: 3px;
     border-radius: 15px;
-    
+
 }
-div.online>div > div>i{
+
+div.online>div>div>i {
     text-align: center;
     padding-top: 5px;
 }
-div.online>div input{
+
+div.online>div input {
     /* border: 2px solid black;
     width: 40%;
     border: 1px solid black;
     border-radius: 30px;
     margin-left: 25%; */
-    background:none;
+    background: none;
     border: none;
 }
-div.online>div input:focus{
-    outline: none;   
+
+div.online>div input:focus {
+    outline: none;
 }
+
 div.n-heart {
     cursor: pointer;
 }
 
 /* nút xem thêm */
-.box{
+.box {
     max-height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 25px;
     padding: 20px 0px;
 }
-.add{
+
+.add {
     /* max-height: none ; */
     background-color: aqua;
 }
+
 button {
-    background:none;
+    background: none;
     border: none;
     cursor: pointer;
     font-size: 17px;
 }
-.btn-less{
+
+.btn-less {
     display: none;
 }
 
