@@ -45,13 +45,18 @@ input#ip-search:focus {
     align-items: stretch;
     flex-direction: row;
     height: 100%;
+    width: 100%;
     position: relative;
     overflow-x: auto;
     overflow-y: hidden;
-    transition: left 1s;
+    /* transition: transform 3s; */
     /*hiếu thêm*/
     left: -4px;
+    /* scroll-behavior: auto; */
+    scroll-behavior: smooth;
 }
+
+
 
 ul.stories::-webkit-scrollbar {
     display: none;
@@ -155,22 +160,30 @@ li.story a {
 
 .note {
     position: absolute;
-    background-color: aqua;
+    background-color: lightblue;
     width: 0px;
     top: 0px;
     right: 0px;
     left: 100%;
     bottom: 0px;
-    transition: width 4s;
+    transition: width 2s;
     opacity: 0;
     z-index: -111;
     overflow: hidden;
 }
 
-.notes:hover .note {
-    /* left: 100%; */
+.notes:hover .note{
     opacity: 1;
-    width: 500px;
+    width: 400px;
+}
+
+.notif li {
+    text-align: center;
+    /* width:1rem; */
+    padding: 0;
+    margin-top: 0!important;
+    margin-bottom: 0!important;
+    border: 2px;
 }
 
 /* bài viết */
@@ -189,6 +202,27 @@ li.story a {
     display: block;
     opacity: 1;
     transition: opacity 2s;
+
+}
+
+/* nút restore*/
+.restore {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: lightblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    display: none; /*sửa khi hoàn xóa*/
+    opacity: 0;
+    transition: opacity 2s;
+
+}
+
+.btn-restore {
+    margin-left: auto;
+    border: 5px;
+    font-size: 1.5rem;
 
 }
 

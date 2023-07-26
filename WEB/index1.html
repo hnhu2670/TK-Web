@@ -10,11 +10,24 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <link rel="stylesheet" href="/CSS/Header.css">
-    <link rel="stylesheet" href="/CSS/Discover.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Discover.css">
+    <script src="JS/Discover.js"></script>
     <title>MY WEB</title>
 
-
+    <script>
+        wow = new WOW(
+            {
+                boxClass: 'wow',      // default
+                animateClass: 'animate', // default
+                offset: 0,          // default
+                mobile: true,       // default
+                live: true        // default
+            }
+        )
+        wow.init();
+    </script>
 
 </head>
 
@@ -25,7 +38,7 @@
                 <li>
                     <div class="name">
                         <a href="#">
-                            <img src="/IMG/Logo.png" alt="LOGO" class="logo">
+                            <img src="IMG/Logo.png" alt="LOGO" class="logo">
                         </a>
                     </div>
                 </li>
@@ -63,69 +76,69 @@
         <section class="content">
             <div class="top flex">
                 <div class="t-left">
-                    <div><img src="/IMG/discover/anh2.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div  class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh2.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-center">
-                    <div><img src="/IMG/discover/anh9.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh9.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-right">
-                    <div><img src="/IMG/discover/anh3.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh3.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
             </div>
             <div class="bottom flex">
                 <div>
-                    <div><img src="/IMG/discover/anh1.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh1.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div>
-                    <div><img src="/IMG/discover/anh10.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh10.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
             </div>
             <div class="top flex">
                 <div class="t-left">
-                    <div><img src="/IMG/discover/anh3.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh3.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-center">
-                    <div><img src="/IMG/discover/anh9.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh9.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-right">
-                    <div><img src="/IMG/discover/anh6.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh6.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
             </div>
             <div class="bottom flex">
                 <div>
-                    <div><img src="/IMG/discover/anh1.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh1.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div>
-                    <div><img src="/IMG/discover/anh10.jpg" alt=""></div>
-                    <div class="bg">
-                        <h3>Yêu Thích</h3>
+                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh10.jpg" alt=""></div>
+                    <div class="bg" >
+                        <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
             </div>
