@@ -20,7 +20,7 @@ $(window).on("load", function () {
                 // $(".sub").slideDown(500)
                 $(".sub").css({
                     "position": "fixed",
-                    "z-index": 9999
+                    "z-index": 99
                 })
                 $(".sub-Profile").css({
                     "background-color": "blue",
@@ -63,32 +63,109 @@ function load_item() {
         })
 }
 
-// function load_anh(obj) {
-//     let like = document.getElementById("like")
-//     like.style.display = "block"
-// }
-
-window.onload = function () {
+function load_anh() {
+    // alert("hello")
     let item = document.getElementById("item")
     let like = document.getElementById("like")
     let tag = document.getElementById("tag")
-    let ds = document.querySelectorAll(".list li")
-    console.log(ds)
-    // for (let i = 0; i < ds.length; i++)
-    //     ds[i].onclick = function () {
-    //         if (ds[i] == ds[0]) {
-    //             item.style.display = "block"
-    //         }
-    //         if (ds[i] == ds[1]) {
-    //             item.style.display = "none"
-    //             tag.style.display = "none"
-    //             like.style.display = "block"
-    //         }
-    //         if (ds[i] == ds[2]) {
-    //             like.style.display = "none"
-    //             item.style.display = "none"
-    //             tag.style.display = "block"
+    let ds = document.querySelectorAll(".list>li")
+    // console.log(ds)
+    for (let i = 0; i < ds.length; i++)
+        ds[i].onclick = function () {
+            if (ds[i] == ds[0]) {
+                ds[0].style.borderTop = "5px solid gray";
+                ds[1].style.borderTop = "none";
+                ds[2].style.borderTop = "none";
+                tag.style.display = "none"
+                like.style.display = "none"
+            }
+            if (ds[i] == ds[1]) {
+                ds[0].style.borderTop = "none";
+                ds[1].style.borderTop = "5px solid gray";
+                ds[2].style.borderTop = "none";
+                tag.style.display = "none"
+                like.style.display = "block"
+            }
+            if (ds[i] == ds[2]) {
+                ds[0].style.borderTop = "none";
+                ds[1].style.borderTop = "none";
+                ds[2].style.borderTop = "5px solid gray";
+                like.style.display = "none"
+                tag.style.display = "block"
 
-    //         }
-    //     }
+            }
+        }
 }
+
+function follow(obj) {
+    //alert("click")
+    let f = obj
+    let d = document.getElementById("fixed")
+    d.style.display = "block"
+}
+function remove(obj) {
+    let r = obj
+    let d = document.getElementById("fixed")
+    d.style.display = "none"
+
+}
+function load_follow() {
+    let c = document.getElementById("items");
+    c.innerHTML = "";
+
+    fetch(`/JSON/friends.json`)
+        .then((res) => {
+            return res.json();
+        }).then((data) => {
+            let d = document.getElementById("fl_list");
+            for (i of data) {
+
+                d.innerHTML +=
+                    `<ul>
+                        <li>
+                            <hr>
+                        </li>
+                        <li class="flex">
+                            <div class="flex picture">
+                                <div class="pic">
+                                    <img src="${i.img}" alt="">
+                                </div>
+                                <div class="user">
+                                    <h3>${i.name}</h3>
+                                </div>
+                            </div>
+                            <div class="btn" onclick="check(this)">
+                                <button class="del">Xóa</button>
+                            </div>
+                        </li>
+                    </ul>`
+            }
+        })
+}
+
+function check(obj) {
+    let btn = obj
+    let b = document.getElementById("unfollow")
+    b.style.display = "block"
+    let par = btn.parentNode
+    let child = par.querySelector(".del")
+
+    let un = document.querySelectorAll("#button li")
+    for (let i of un) {
+        i.onclick = function () {
+            let text = this.innerText
+            if (text.indexOf("Có") >= 0) {
+                b.style.display = "none"
+                child.innerText = "Đã xóa"
+                child.disabled = true
+                child.style.backgroundColor = "lightgray"
+            }
+            else {
+                b.style.display = "none"
+                child.innerText = "Xóa"
+            }
+        }
+    }
+
+}
+
