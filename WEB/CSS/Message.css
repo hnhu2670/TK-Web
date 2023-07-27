@@ -1,0 +1,146 @@
+main.main {
+    width: 100%;
+}
+
+/* left */
+section.left {
+    width: 30%;
+    height: 100%;
+    /* background-color: aqua; */
+    border-right: 2px solid navy;
+}
+
+div.myName {
+    padding: 45px 20px;
+    /* height: 100px; */
+}
+
+div.myName h1 {
+    font-size: 30px;
+}
+
+div.myName div.find {
+    margin-left: auto;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid navy;
+    border-radius: 20px;
+}
+
+div.find>input {
+    margin-left: 10px;
+    width: 90%;
+    border: none;
+    background: none;
+    font-size: 15px;
+}
+
+div.find>input:focus {
+    outline: none;
+}
+
+/* ds hoạt động */
+div.friend {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 770px;
+}
+
+ul.list-friend>li.item {
+    padding: 10px;
+
+}
+
+div.f-img {
+    width: 20%;
+}
+
+div.f-img>img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+div.f-name {
+    margin: 30px 0 0 30px;
+    font-size: 23px;
+}
+
+h3 {
+    font-size: 35px;
+}
+
+span {
+    color: gray;
+
+}
+
+/* right */
+section.right {
+    width: 70%;
+}
+
+div.mes-top {
+    padding: 15px;
+    border-bottom: 0.5px solid gray;
+}
+
+div.mes-top>div.inform {
+    width: 50%;
+}
+
+div.inform div.f-img {
+    width: 15%;
+}
+
+div.inform div.f-img>img {
+    width: 100%;
+}
+
+div.icon {
+    margin-left: auto;
+}
+
+div.icon>ul>li {
+    margin: 20px;
+}
+
+div.icon>ul>li i {
+    font-size: 30px;
+}
+
+div.mes-bottom {
+    position: fixed;
+    bottom: 20px;
+    left: 37%;
+    right: 3%;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+div.mes-bottom>div.text {
+    width: 100%;
+}
+
+div.text>div.ip-text {
+    width: 90%;
+}
+
+div.ip-text>i {
+    margin: 20px 20px;
+    font-size: 30px;
+}
+
+div.ip-text>input {
+    width: 90%;
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
+div.ip-text>input:focus {
+    outline: none;
+}
+
+.node {
+    padding-top: 20px;
+}

@@ -66,7 +66,7 @@
             <div class="fix">
                 <div class="flex">
                     <h2>ĐANG THEO DÕI</h2>
-                    <div id="remove" onclick="setTimeout(remove(this),2000)"><i class="fa-solid fa-xmark"></i></div>
+                    <div id="remove" onclick="remove(this)"><i class="fa-solid fa-xmark"></i></div>
                 </div>
                 <div class="fl_list" id="fl_list">
                     <!-- load từ file json => hàm load_follow -->
@@ -99,7 +99,7 @@
                         <span>Huynh Nhu</span>
                     </div>
                     <div class="infor flex">
-                        <div class="follow" id="fl" onclick="setTimeout(follow(this),5000)">
+                        <div class="follow" id="fl" onclick="follow(this)">
                             <a href="#">ĐANG THEO DÕI</a>
                         </div>
                         <div class="setting">

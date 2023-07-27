@@ -101,12 +101,16 @@ function follow(obj) {
     //alert("click")
     let f = obj
     let d = document.getElementById("fixed")
-    d.style.display = "block"
+    setTimeout(() => {
+        d.style.display = "block"
+    }, 200)
 }
 function remove(obj) {
     let r = obj
     let d = document.getElementById("fixed")
-    d.style.display = "none"
+    setTimeout(() => {
+        d.style.display = "none"
+    }, 100)
 
 }
 function load_follow() {
@@ -146,7 +150,10 @@ function load_follow() {
 function check(obj) {
     let btn = obj
     let b = document.getElementById("unfollow")
-    b.style.display = "block"
+    setTimeout(() => {
+        b.style.display = "block"
+
+    }, 200)
     let par = btn.parentNode
     let child = par.querySelector(".del")
 
@@ -155,14 +162,20 @@ function check(obj) {
         i.onclick = function () {
             let text = this.innerText
             if (text.indexOf("Có") >= 0) {
-                b.style.display = "none"
-                child.innerText = "Đã xóa"
-                child.disabled = true
-                child.style.backgroundColor = "lightgray"
+                setTimeout(() => {
+                    b.style.display = "none"
+                    child.innerText = "Đã xóa"
+                    child.disabled = true
+                    child.style.backgroundColor = "lightgray"
+                }, 100)
+
             }
             else {
-                b.style.display = "none"
-                child.innerText = "Xóa"
+                setTimeout(() => {
+                    b.style.display = "none"
+                    child.innerText = "Xóa"
+                }, 100)
+
             }
         }
     }

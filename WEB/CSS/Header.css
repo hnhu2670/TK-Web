@@ -5,6 +5,14 @@
     color: navy;
 }
 
+ul li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
 /* go to top */
 #go {
     width: 50px;
@@ -79,7 +87,6 @@ nav.menu ul li:first-child {
 }
 
 nav.menu ul li {
-    list-style-type: none;
     line-height: 4;
 
 }

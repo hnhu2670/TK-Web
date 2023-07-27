@@ -1,27 +1,35 @@
 .content {
-    flex-wrap: wrap ;
+    flex-wrap: wrap;
     margin: 10px;
     margin-top: 3%;
 }
-.content > div{
+
+.content>div {
     width: 100%;
     margin-bottom: 10px;
     border-radius: 10px;
 }
-.content > div >div{
+
+.content>div>div {
     position: relative;
+    overflow: hidden;
 }
-.top > div {
+
+.top>div {
     margin: 0px auto;
 }
-.top div.t-left, div.t-right {
+
+.top div.t-left,
+div.t-right {
     width: 20%;
 }
+
 .top div.t-center {
     width: 55%;
 
 }
-.top > div img{
+
+.top>div img {
     width: 100%;
     border-radius: 10px;
 
@@ -30,19 +38,22 @@
 .bottom {
     width: 100%;
 }
-.bottom > div{
+
+.bottom>div {
     width: 49%;
     margin: 0px auto;
 }
-.bottom > div img{
+
+.bottom>div img {
     width: 100%;
     border-radius: 10px;
 
 }
+
 .bg {
     background-color: rgba(0, 0, 4, 0.3);
     position: absolute;
-    top: 0px ;
+    top: 0px;
     right: 0px;
     left: 0px;
     bottom: 0px;
@@ -50,10 +61,12 @@
     display: none;
     padding: 10px;
 }
-.content > div >div:hover .bg{
-     display: block;
+
+.content>div>div:hover .bg {
+    display: block;
 }
-.bg h3{
+
+.bg h3 {
     margin-left: auto;
     width: 150px;
     text-align: center;
@@ -64,4 +77,3 @@
     border-radius: 50px;
     cursor: pointer;
 }
-

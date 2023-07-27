@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Như",
+        "img": "IMG/profile/cat10.jpg",
+        "time": "Hoạt động 3 tiếng trước"
+    },
+    {
+        "name": "AnAN",
+        "img": "IMG/profile/cat1.jpg",
+        "time": "Hoạt động 1 tiếng trước"
+    },
+    {
+        "name": "Hoa",
+        "img": "IMG/profile/cat9.jpg",
+        "time": "Hoạt động 2 tiếng trước"
+    },
+    {
+        "name": "Nguyễn Văn Nam",
+        "img": "IMG/profile/cat4.jpg",
+        "time": "Đang hoạt động"
+    },
+    {
+        "name": "Nguyễn Thanh An",
+        "img": "IMG/profile/cat8.jpg",
+        "time": "Hoạt động 1 tiếng trước"
+    },
+    {
+        "name": "ViVi",
+        "img": "IMG/profile/cat2.jpg",
+        "time": "Đang hoạt động"
+    },
+    {
+        "name": "Hồng Ân",
+        "img": "IMG/profile/cat3.jpg",
+        "time": "Hoạt động 2 tiếng trước"
+    },
+    {
+        "name": "Nguyễn Văn C",
+        "img": "IMG/profile/cat1.jpg",
+        "time": "Hoạt động 1 tiếng trước"
+    }
+]
