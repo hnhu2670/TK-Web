@@ -37,6 +37,7 @@ input#ip-search:focus {
     margin: 10px auto;
     padding: 10px;
     position: relative;
+    overflow: hidden;
 }
 
 
@@ -63,8 +64,6 @@ ul.stories::-webkit-scrollbar {
 }
 
 .tab-story ul.stories li.story {
-    width: 100%;
-    height: 100%;
     margin: 0 10px;
 
 }
@@ -134,7 +133,7 @@ li.story a {
 .myImg {
     width: 25%;
     border-radius: 50%;
-    padding-right: 20px;
+    padding-right: 10px;
 }
 
 .myImg img {
@@ -168,7 +167,7 @@ li.story a {
     right: 0px;
     left: 100%;
     bottom: 0px;
-    transition: width 2s;
+    transition: width 1s;
     opacity: 0;
     z-index: -111;
     overflow: hidden;
@@ -230,7 +229,7 @@ li.story a {
 }
 
 .n-name .myImg {
-    width: 10%;
+    width: 15%;
 }
 
 .close {
@@ -259,9 +258,9 @@ li.story a {
 /*Hiếu Thêm*/
 
 /*thêm*/
-.tab-story {
+/* .tab-story {
     overflow: hidden;
-}
+} */
 
 /*thêm*/
 .story-img img:hover {
@@ -368,6 +367,16 @@ div.online>div input:focus {
 
 div.n-heart {
     cursor: pointer;
+    position: relative;
+}
+
+div.n-heart>div {
+    width: 5%;
+    margin: 0 10px;
+}
+
+div.n-heart>div>img {
+    width: 100%;
 }
 
 /* nút xem thêm */
@@ -376,7 +385,7 @@ div.n-heart {
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 25px;
-    padding: 20px 0px;
+    padding: 10px 0px;
 }
 
 .add {
@@ -389,10 +398,40 @@ button {
     border: none;
     cursor: pointer;
     font-size: 17px;
+    color: gray;
 }
 
 .btn-less {
     display: none;
+}
+
+.sub-heart {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: aliceblue;
+    border-radius: 35px;
+    z-index: 9999;
+    width: 250px !important;
+}
+
+div.heart>i:hover .sub-heart {
+    display: block;
+
+}
+
+.sub-heart ul {
+    justify-content: space-between;
+}
+
+.sub-heart ul li {
+    width: 40%;
+    margin: 0 10px;
+}
+
+.sub-heart ul li>img {
+    width: 100%;
+    padding: 5px;
 }
 
 /* mini chat */
@@ -405,3 +444,47 @@ button {
     right: 50px;
     z-index: 9999;
 } */
+
+@media (max-width: 900px) {
+    #m-center {
+        width: 100%;
+    }
+
+    .list-news {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .myName {
+        padding-top: 0;
+    }
+
+    .myName h3 {
+        padding-top: 10px;
+        font-size: 25px;
+    }
+
+    .list-news i {
+        font-size: 25px;
+    }
+
+    .box p {
+        font-size: 13px;
+    }
+
+    .n-heart>div>i {
+        font-size: 25px;
+    }
+
+    div.n-heart>div {
+        width: 8.5%;
+    }
+
+    .sub-heart {
+        width: 140px !important;
+    }
+
+    button {
+        font-size: 10px;
+    }
+}

@@ -5,7 +5,7 @@ main.main {
 /* left */
 section.left {
     width: 30%;
-    height: 100%;
+    /* height: 100%; */
     /* background-color: aqua; */
     border-right: 2px solid navy;
 }
@@ -43,7 +43,7 @@ div.find>input:focus {
 div.friend {
     overflow: hidden;
     overflow-y: scroll;
-    height: 770px;
+    height: 750px;
 }
 
 ul.list-friend>li.item {

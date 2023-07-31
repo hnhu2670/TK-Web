@@ -31,9 +31,11 @@ function click_Name(obj) {
     let par = obj.parentNode
     par.classList.add("animate__animated")
     par.classList.add("animate__pulse")
+    par.style.background = "lightblue"
     setTimeout(() => {
         par.classList.remove("animate__animated")
         par.classList.remove("animate__pulse")
+        par.style.background = "none"
     }, 1000)
     // par.style.backgroundColor = "lightblue"
     let img = par.querySelector(".f-img img")

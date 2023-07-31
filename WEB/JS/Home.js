@@ -131,18 +131,57 @@ function find_friends(obj) {
         });
 
 };
-
 function heart(obj) {
+
     let a = obj;
+    let b = a.parentNode.parentNode
+    // let img = document.querySelector(".heart img")
+    // console.log(img.src)
+    let c = b.querySelector(".sub-heart")
+
     let colora = getComputedStyle(a);
     let thiscolor = colora.color;
-
     if (thiscolor === "rgb(255, 0, 0)" || thiscolor === "red") {
         a.style.color = "navy";
+        c.style.display = "none"
+
+
     } else {
         a.style.color = "red";
+        c.style.display = "block"
     }
+    let icon = b.querySelectorAll(".sub-heart ul li img")
+    //console.log(icon.length)
+    for (let i = 0; i < icon.length; i++) {
+        icon[i].onclick = function () {
+
+            if (icon[i] !== icon[3]) {
+                a.src = icon[i].src
+                setTimeout(() => {
+                    a.classList.add("animate__animated")
+                    a.classList.add("animate__tada")
+                }, 100)
+                setTimeout(() => {
+                    a.classList.remove("animate__animated")
+                    a.classList.remove("animate__tada")
+                }, 1000)
+
+
+            }
+            else {
+                a.src = "IMG/home/black-heart.png"
+                //console.log(a.src)
+            }
+            setTimeout(() => {
+                c.style.display = "none"
+            }, 200)
+
+        }
+    }
+
+
 }
+
 
 function load_news() {
     let c = document.getElementById("h-load-news");
@@ -189,14 +228,25 @@ function load_news() {
                     </div> 
                 </div>
                 <div class="n-heart flex">
-                    <div class="heart">
-                        <i class="fa-regular fa-heart" onclick="heart(this)"></i>
+                    <div class="heart wow">
+                    <img src="/IMG/home/black-heart.png" alt="" onclick="heart(this)">
+                        <!-- <i class="fa-regular fa-heart" onclick="heart(this)"> -->
+
+                        </i>
                     </div>
                     <div class="comment">
-                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-regular fa-comment" style="color:black"></i>
                     </div>
                     <div class="share">
-                        <i class="fa-regular fa-paper-plane"></i>
+                        <i class="fa-regular fa-paper-plane" style="color:black"></i>
+                    </div>
+                    <div class="sub-heart">
+                        <ul class="flex">
+                            <li class="love-heart"><img src="IMG/home/heart.png" alt=""></li>             
+                            <li class="smile"><img src="IMG/home/smile.png" alt=""></li>
+                            <li class="cry"><img src="IMG/home/cry.png" alt=""></li>
+                            <li class="delete"><img src="IMG/home/delete.png" alt=""></li>
+                        </ul>
                     </div>
                 </div>
             </div>`;
@@ -352,6 +402,65 @@ function click_less(obj) {
     btn.style.display = "none"
     btn_more.style.display = "block"
 }
+
+
+// tạo tin - load hình ảnh từ file
+function checkImg(obj) {
+    let fileInput = document.getElementById("fileInput")
+    let a = document.querySelector(".pic")
+    let b = document.querySelector(".tao-tin")
+    b.style.display = "none"
+
+    setTimeout(() => {
+        a.style.display = "block"
+    }, 100)
+    //thuộc tính file trả về một list => files[0] lấy đối tượng đầu tiên
+    let file = fileInput.files[0]
+    let img = document.querySelector(".load-img img")
+
+    let reader = new FileReader()
+    setTimeout(() => {
+        reader.onload = function () {
+            img.src = reader.result
+        }
+        // phương thức readAsDataURL() được sử dụng để bắt đầu đọc file
+        reader.readAsDataURL(file)
+    }, 400)
+
+}
+function add() {
+    let back = document.getElementById("back")
+    let a = document.querySelector(".pic")
+    let b = document.querySelector(".tao-tin")
+    let news = document.getElementById("bangTin")
+
+    let add = document.getElementById("add-new")
+    add.onclick = function () {
+        setTimeout(() => {
+            news.style.display = "block"
+            b.style.display = "block"
+        }, 200)
+    }
+
+    back.onclick = function () {
+        a.style.display = "none"
+
+        setTimeout(() => {
+            b.style.display = "block"
+        }, 300)
+    }
+    let next = document.getElementById("share")
+    next.onclick = function () {
+        alert("Chia sẻ thành công")
+        setTimeout(() => {
+            a.style.display = "none"
+            news.style.display = "none"
+
+        }, 400)
+    }
+
+}
+
 
 
 

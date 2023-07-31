@@ -1,0 +1,112 @@
+section.tin {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background-color: rgba(4, 26, 33, 0.7);
+
+}
+
+section.tin>div.tao-tin {
+    width: 35%;
+    background-color: white;
+    margin: 0px auto;
+    margin-top: 10%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+div>h1 {
+    font-size: 40px;
+    text-align: center;
+    padding: 10px;
+}
+
+div.add-img {
+    padding: 20px;
+    border-top: 1px solid black;
+}
+
+div.infor-img>div {
+    text-align: center;
+    padding: 20px;
+}
+
+div.infor-img>div>i {
+    font-size: 100px;
+    text-align: center;
+}
+
+.btn-file {
+    margin: 0px auto;
+    font-size: 30px;
+    border: 1px solid black;
+    width: 150px;
+    padding: 10px;
+    text-align: center;
+}
+
+/* sau khi load ảnh */
+section.pic {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+section.pic>div.next {
+    width: 55%;
+    background-color: white;
+    margin: 0px auto;
+    margin-top: 7%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+div.next span {
+    font-size: 30px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+div.next div.load-img {
+    width: 48%;
+    height: 500px;
+}
+
+div.next div.load-img img {
+    width: 100%;
+}
+
+.load-infor {
+    width: 50%;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.load-infor .myImg {
+    width: 13%;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+.load-infor .myName h3 {
+    padding-top: 5px;
+    font-size: 25px;
+}
+
+div>textarea {
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+}
+
+div>textarea:focus {
+    outline: none;
+}

@@ -14,9 +14,13 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <link rel="stylesheet" href="CSS/Header.css">
     <link rel="stylesheet" href="CSS/Home.css">
-    <script src="JS/Home.js"></script>
-    <title>MY WEB</title>
+    <link rel="stylesheet" href="CSS/Add_new.css">
 
+    <script src="JS/Home.js"></script>
+    <!-- responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MY WEB</title>
+    <link rel="shortcut icon" href="/IMG/LM.png">
     <script>
         wow = new WOW(
             {
@@ -31,18 +35,57 @@
     </script>
 </head>
 
-<body onload="load_friends(); load_news(); load_btn();">
+<body onload="load_friends(); load_news(); load_btn();add()">
     <div id="go">
         <a href="javascript:;"><i class="fa-solid fa-chevron-up"></i></a>
     </div>
-    <div class="flex">
+    <header class="res-header">
+        <nav class="res-menu">
+            <ul class="flex">
+                <li class="wow animate__animated animate__zoomIn">
+                    <div>
+                        <a href="#">
+                            <img src="IMG/LM.png" alt="LOGO" class="logo">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index1.html">
+                        <i class="fa-regular fa-compass"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index2.html">
+                        <i class="fa-regular fa-comment-dots"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-bell"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-regular fa-square-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="flex" id="responsive">
         <header class="h_header">
             <nav class="flex menu">
                 <ul>
-                    <li class="wow animate__animated animate__bounce">
+                    <li class="wow animate__animated animate__jackInTheBox">
                         <div class="name">
                             <a href="#">
-                                <img src="IMG/Logo.png" alt="LOGO">
+                                <!-- <img src="IMG/Logo.png" alt="LOGO"> -->
+                                <img src="IMG/LM.png" alt="LOGO">
                             </a>
                         </div>
                     </li>
@@ -89,15 +132,15 @@
                             </ul>
                         </a>
                     </li>
-                    <li>
+                    <li id="add-new">
                         <a href="#">
                             <i class="fa-regular fa-square-plus"></i>
                             <span>TẠO TIN</span>
                         </a>
                     </li>
+
                 </ul>
             </nav>
-
         </header>
 
         <main class="h_main">
@@ -275,6 +318,58 @@
                     </div>
                 </div>
             </div>
+            <section class="tin" id="bangTin">
+                <div class="tao-tin">
+                    <div>
+                        <h1>TẠO BÀI VIẾT MỚI</h1>
+                    </div>
+                    <div class="add-img">
+                        <div class="infor-img">
+                            <div>
+                                <i class="fa-regular fa-image fa-beat"></i>
+                            </div>
+                            <div>
+                                <h2>Chọn hình ảnh bạn muốn vào đây !!!!!!</h2>
+                            </div>
+                        </div>
+                        <div class="btn-file">
+                            <label for="fileInput" style="cursor: pointer;">
+                                chọn file
+                                <input type="file" style="display: none;" id="fileInput" onchange="checkImg(this)"
+                                    accept=".jpg, .jpeg, .png, .pdf">
+                                <!-- Thêm các phần mở rộng tệp mà bạn muốn cho phép tại thuộc tính accept -->
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="pic wow animate__animated animate__zoomIn">
+                <div class="next">
+                    <div class="flex" style="justify-content: space-between;">
+                        <span id="back"><i class="fa-solid fa-arrow-left" title="Quay lại"></i></span>
+                        <h1>TẠO BÀI VIẾT MỚI</h1>
+                        <span id="share">Chia sẻ</span>
+                    </div>
+                    <div class="flex load">
+                        <div class="load-img">
+                            <img src="" alt="ảnh">
+                        </div>
+                        <div class="load-infor">
+                            <div class="flex">
+                                <div class="myImg">
+                                    <img src="IMG/avatar.jpg" alt="">
+                                </div>
+                                <div class="myName">
+                                    <h3>nhunhu</h3>
+                                </div>
+                            </div>
+                            <div style="margin-top: 10px;">
+                                <textarea cols="40" rows="10" placeholder="Bạn đang nghĩ gì....."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
     </div>
 

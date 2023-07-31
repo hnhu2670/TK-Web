@@ -56,7 +56,7 @@ body {
     height: 100%;
     position: fixed;
     top: 0;
-    z-index: 9999;
+    z-index: 99;
     border-right: 1px solid navy;
 }
 
@@ -110,11 +110,12 @@ nav.menu .name {
 }
 
 .name .logo {
-    padding-top: 30%;
+    padding-top: 50%;
+    width: 95%;
 }
 
 .name img {
-    width: 100%;
+    width: 80%;
 }
 
 /* main */
@@ -125,4 +126,56 @@ nav.menu .name {
 
 .main {
     margin-left: 7.3% !important;
+}
+
+/* điện thoại */
+.res-menu {
+    display: none;
+}
+
+.res-menu>ul {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+
+.res-menu>ul>li:first-child {
+    width: 20%;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.res-menu>ul>li {
+    width: 15%;
+    margin-top: 7%;
+    text-align: center;
+
+}
+
+.res-menu i {
+    font-size: 25px;
+}
+
+.logo {
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+
+    .res-menu {
+        display: block;
+    }
+
+    .h_header {
+        display: none;
+    }
+
+    #m-right {
+        display: none;
+    }
+
+    .h_main {
+        margin-left: 0;
+
+    }
 }

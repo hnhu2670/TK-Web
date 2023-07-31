@@ -33,7 +33,25 @@ $(window).on("load", function () {
         })
     })
 });
-
+function click_heart(obj) {
+    let a = obj
+    let colora = getComputedStyle(a);
+    let thiscolor = colora.color;
+    if (thiscolor === "rgb(255, 0, 0)" || thiscolor === "red") {
+        a.style.color = "black";
+    }
+    else {
+        a.style.color = "red";
+        setTimeout(() => {
+            a.classList.add("animate__animated")
+            a.classList.add("animate__tada")
+        }, 100)
+        setTimeout(() => {
+            a.classList.remove("animate__animated")
+            a.classList.remove("animate__tada")
+        }, 1000)
+    }
+}
 function load_item() {
     let c = document.getElementById("items");
     c.innerHTML = "";
@@ -50,8 +68,8 @@ function load_item() {
                         <img src="${i.img}" alt="">
                         <div class="bg-top ">
                             <div class="flex icon">
-                                <div class="icon-heart">
-                                    <i class="fa-solid fa-heart"></i>
+                                <div class="icon-heart wow">
+                                    <i class="fa-solid fa-heart" onclick="click_heart(this)"></i>
                                 </div>
                                 <div class="icon-share">
                                     <i class="fa-regular fa-paper-plane "></i>
