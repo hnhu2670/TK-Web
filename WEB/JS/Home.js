@@ -202,53 +202,50 @@ function load_news() {
                             <button class="btn-restore" onclick="restore_news(this)">Hoàn Tác</button>
                         </div>
             <div class="list-news" id="list-news${count}">
-                <div class="n-name flex">
-                    <div class="myImg">
-                        <a href="index3.html">
-                            <img src="${i.image}" alt="">
-                        </a>
+                    <div class="n-name flex">
+                        <div class="myImg">
+                            <a href="index3.html">
+                                <img src="${i.image}" alt="">
+                            </a>
+                        </div>
+                        <div class="myName">
+                            <a href="index3.html">
+                                <h3>${i.name}</h3>
+                            </a>
+                        </div>
+                        <div class="close">
+                            <i class="fa-solid fa-xmark" onclick="hide_news(this)"></i>
+                        </div>
                     </div>
-                    <div class="myName">
-                        <a href="index3.html">
-                            <h3>${i.name}</h3>
-                        </a>
+                    <div class="n-infor">
+                        <div class="box">
+                            <p>${i.content}</p>
+                        </div>
+                        <button class="btn-more" onclick=click_more(this)>Xem thêm</button>
+                        <button class="btn-less" onclick=click_less(this)>Rút gọn</button>
+                        <div class="n-img">
+                            <img src="${i.content_img}" alt="">
+                        </div>
                     </div>
-                    <div class="close">
-                        <i class="fa-solid fa-xmark" onclick="hide_news(this)"></i>
+                    <div class="n-heart flex">
+                        <div class="heart wow">
+                            <img src="/IMG/home/black-heart.png" alt="" onclick="heart(this)">
+                        </div>
+                        <div class="comment">
+                            <i class="fa-regular fa-comment" style="color:black"></i>
+                        </div>
+                        <div class="share">
+                            <i class="fa-regular fa-paper-plane" style="color:black"></i>
+                        </div>
+                        <div class="sub-heart">
+                            <ul class="flex">
+                                <li class="love-heart"><img src="IMG/home/heart.png" alt=""></li>
+                                <li class="smile"><img src="IMG/home/smile.png" alt=""></li>
+                                <li class="cry"><img src="IMG/home/cry.png" alt=""></li>
+                                <li class="delete"><img src="IMG/home/delete.png" alt=""></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div class="n-infor">
-                    <div class="box">
-                        <p>${i.content} </p>
-                    </div>
-                    <button class="btn-more" onclick = click_more(this)>Xem thêm</button>
-                    <button class="btn-less" onclick = click_less(this)>Rút gọn</button>
-                    <div class="n-img">
-                        <img src="${i.content_img}" alt="">
-                    </div> 
-                </div>
-                <div class="n-heart flex">
-                    <div class="heart wow">
-                    <img src="/IMG/home/black-heart.png" alt="" onclick="heart(this)">
-                        <!-- <i class="fa-regular fa-heart" onclick="heart(this)"> -->
-
-                        </i>
-                    </div>
-                    <div class="comment">
-                        <i class="fa-regular fa-comment" style="color:black"></i>
-                    </div>
-                    <div class="share">
-                        <i class="fa-regular fa-paper-plane" style="color:black"></i>
-                    </div>
-                    <div class="sub-heart">
-                        <ul class="flex">
-                            <li class="love-heart"><img src="IMG/home/heart.png" alt=""></li>             
-                            <li class="smile"><img src="IMG/home/smile.png" alt=""></li>
-                            <li class="cry"><img src="IMG/home/cry.png" alt=""></li>
-                            <li class="delete"><img src="IMG/home/delete.png" alt=""></li>
-                        </ul>
-                    </div>
-                </div>
             </div>`;
                 count += 1;
             }
@@ -338,7 +335,7 @@ $(window).on("load", () => {
     $(document).ready(function () {
         $("#go").hide()
         $(window).scroll(() => {
-            if ($(this).scrollTop() >= 300) {
+            if ($(this).scrollTop() >= 500) {
                 $("#go").show()
             }
             else {
@@ -433,7 +430,12 @@ function add() {
     let a = document.querySelector(".pic")
     let b = document.querySelector(".tao-tin")
     let news = document.getElementById("bangTin")
-
+    let del = document.getElementById("del")
+    del.onclick = function () {
+        setTimeout(() => {
+            news.style.display = "none"
+        }, 200)
+    }
     let add = document.getElementById("add-new")
     add.onclick = function () {
         setTimeout(() => {
@@ -461,7 +463,29 @@ function add() {
 
 }
 
+// thông báo
+function load_note() {
+    let note = document.getElementById("noti")
+    console.log(note)
+    let a = document.querySelector(".note")
+    let count = 0;
 
+    note.onclick = function () {
+        count++;
+        if (count % 2 === 1) {
+            setTimeout(() => {
+                a.style.left = "18%"
+                a.style.right = "60%"
+
+            }, 500)
+
+        }
+        else {
+            a.style.left = "-18%"
+            a.style.right = "100%"
+        }
+    }
+}
 
 
 

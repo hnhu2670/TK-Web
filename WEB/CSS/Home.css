@@ -1,10 +1,12 @@
 /* giữa */
 #m-center {
-    width: 75%;
+    width: 70%;
+    border-right: 1px solid navy
 }
 
 #m-center>div {
     margin: 0px auto;
+    width: 100%;
 }
 
 /* nút tìm kiếm */
@@ -27,8 +29,67 @@ input#ip-search:focus {
     outline: none;
 }
 
+/* story */
+div.h-content div.tab-story {
+    width: 80%;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+ul.stories {
+    overflow-x: scroll;
+    justify-content: space-between;
+}
+
+ul.stories li.story {
+    width: 20%;
+    margin: 18px;
+}
+
+ul.stories li.story img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+li.story a>div:first-child {
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    background-color: black;
+    padding: 3px;
+    margin: 0px auto;
+}
+
+ul.stories::-webkit-scrollbar {
+    display: none;
+}
+
+li.story a>div:last-child>h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.btn {
+    position: absolute;
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    top: 40px;
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+*/
 /* trang nội dung chính */
-.h-content {
+/* .h-content {
     width: 100%;
 }
 
@@ -38,10 +99,10 @@ input#ip-search:focus {
     padding: 10px;
     position: relative;
     overflow: hidden;
-}
+} */
 
 
-.tab-story ul.stories {
+/* .tab-story ul.stories {
     list-style-type: none;
     align-items: stretch;
     flex-direction: row;
@@ -51,15 +112,15 @@ input#ip-search:focus {
     overflow-x: auto;
     overflow-y: hidden;
     transition: left 2s;
-    /*hiếu thêm*/
-    left: -4px;
-    /* scroll-behavior: auto; */
-    /* scroll-behavior: smooth; */
-}
+    hiếu thêm */
+/* left: -4px; */
+/* scroll-behavior: auto; */
+*/
+/* scroll-behavior: smooth; */
+*/
+/* } */
 
-
-
-ul.stories::-webkit-scrollbar {
+/* ul.stories::-webkit-scrollbar {
     display: none;
 }
 
@@ -114,14 +175,13 @@ li.story a {
 .right {
     top: 40px;
     right: 20px;
-}
+} */
 
 /* myProfile */
-#m-right {
-    position: fixed;
-    right: 2px;
-    width: 21%;
-    margin: 1% 0 0 15px;
+
+
+/* section.m-right {
+    width: auto;
 }
 
 .myProfile {
@@ -155,32 +215,20 @@ li.story a {
 
 .myFriend {
     background-color: blue;
-}
+} */
 
 /* * thông báo */
 
-.note {
-    position: absolute;
-    background-color: lightblue;
-    width: 0px;
-    top: 0px;
-    right: 0px;
-    left: 100%;
-    bottom: 0px;
-    transition: width 1s;
-    opacity: 0;
-    z-index: -111;
-    overflow: hidden;
-}
 
+
+/* 
 .notes:hover .note {
     opacity: 1;
     width: 400px;
-}
+} */
 
 .notif li {
     text-align: center;
-    /* width:1rem; */
     padding: 0;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
@@ -189,12 +237,12 @@ li.story a {
 
 /* bài viết */
 .h-center {
-    width: 100%;
-    /* background-color: antiquewhite; */
+    width: 80%;
+    margin: 0px auto;
 }
 
 .list-news {
-    width: 70%;
+    width: 100%;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -228,8 +276,27 @@ li.story a {
 
 }
 
+.n-name {
+    height: 120px;
+}
+
+.n-name>div {
+    margin-right: 20px;
+}
+
 .n-name .myImg {
-    width: 15%;
+    width: 12%;
+}
+
+.n-name .myImg img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.n-name .myName h3 {
+    font-size: 30px;
+    padding: 50% 0px;
 }
 
 .close {
@@ -255,14 +322,6 @@ li.story a {
     margin-right: 20px;
 }
 
-/*Hiếu Thêm*/
-
-/*thêm*/
-/* .tab-story {
-    overflow: hidden;
-} */
-
-/*thêm*/
 .story-img img:hover {
     transform: scale(1.2, 1.2);
 }
@@ -272,17 +331,12 @@ li.story a {
 }
 
 .friendss {
-    margin-top: 30%;
+    margin-top: 10%;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 650px;
+    height: 600px;
 }
 
-/* 
-section.friend {
-    width: 20%;
-    margin-top: 20%;
-} */
 
 .friends {
     width: auto;
@@ -352,11 +406,6 @@ div.online>div>div>i {
 }
 
 div.online>div input {
-    /* border: 2px solid black;
-    width: 40%;
-    border: 1px solid black;
-    border-radius: 30px;
-    margin-left: 25%; */
     background: none;
     border: none;
 }
@@ -434,16 +483,6 @@ div.heart>i:hover .sub-heart {
     padding: 5px;
 }
 
-/* mini chat */
-/* .mini-chat{
-    width: 500px;
-    height: 400px;
-    background-color: aquamarine;
-    position: absolute;
-    bottom: 50px;
-    right: 50px;
-    z-index: 9999;
-} */
 
 @media (max-width: 900px) {
     #m-center {

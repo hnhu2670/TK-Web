@@ -23,6 +23,13 @@ div>h1 {
     font-size: 40px;
     text-align: center;
     padding: 10px;
+    margin: 0px auto;
+}
+
+div#del {
+    margin-left: auto;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 div.add-img {

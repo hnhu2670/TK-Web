@@ -121,7 +121,7 @@ nav.menu .name {
 /* main */
 .h_main {
     width: 100%;
-    margin-left: 18%;
+    margin-left: 17.5%;
 }
 
 .main {
@@ -178,4 +178,47 @@ nav.menu .name {
         margin-left: 0;
 
     }
+}
+
+/* phần right của trang home */
+section#m-right {
+    width: 23%;
+    position: fixed;
+    right: 20px;
+    top: 10%;
+}
+
+#m-right>div.myProfile {
+    width: 100%;
+    margin-top: 10%;
+}
+
+div.myProfile div.myImg {
+    width: 20%;
+    margin-right: 5%;
+}
+
+div.myImg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+div.myName div.fname {
+    /* padding: 20px 0px; */
+    font-size: 35px;
+
+}
+
+div.myName div.lname {
+    font-size: 20px;
+}
+
+/* thông báo */
+ul.note {
+    position: fixed;
+    top: 0;
+    left: -18%;
+    right: 100%;
+    bottom: 0;
+    background-color: aliceblue;
 }
