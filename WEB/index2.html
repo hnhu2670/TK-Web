@@ -10,10 +10,13 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="/CSS/Header.css">
-    <link rel="stylesheet" href="/CSS/Message.css">
-    <link rel="shortcut icon" href="/IMG/LM.png">
-    <script src="/JS/Message.js"></script>
+    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Add_new.css">
+    <link rel="stylesheet" href="CSS/Message.css">
+
+    <link rel="shortcut icon" href="IMG/LM.png">
+    <script src="JS/Message.js"></script>
+    <script src="JS/Menu.js"></script>
 
     <title>Tin nhắn</title>
     <script>
@@ -95,18 +98,38 @@
                             <i class="fa-regular fa-comment-dots"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li id="noti " onclick="load_subnote(this)">
+                        <a href="javascript:;" class="notes">
                             <i class="fa-regular fa-bell"></i>
+                            <ul class="note sub-note wow animate__animated ">
+                                <li>
+                                    <h3>Thông báo</h3>
+                                </li>
+                                <li>
+                                    <ul class="notif">
+                                        <li>Thông báo 1</li>
+                                        <li>Thông báo 2</li>
+                                        <li>Thông báo 3</li>
+                                        <li>Thông báo 1</li>
+                                        <li>Thông báo 2</li>
+                                        <li>Thông báo 3</li>
+                                        <li>Thông báo 1</li>
+                                        <li>Thông báo 2</li>
+                                        <li>Thông báo 3</li>
+
+                                    </ul>
+                                </li>
+                            </ul>
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li id="add-new" onclick=" tao_tin(this)">
+                        <a href="javascript:;">
                             <i class="fa-regular fa-square-plus"></i>
                         </a>
                     </li>
                 </ul>
             </nav>
+
         </header>
         <main class="main">
             <div class="content flex">
@@ -164,118 +187,60 @@
                     </div>
                 </section>
             </div>
-        </main>
-
-        <!-- <main class="main">
-            <section class="content flex">
-                <div class="left">
-                    <div class="myName">
-                        <div class="flex">
-                            <div>
-                                <h1>Hieu</h1>
-                            </div>
-                            <div class="find">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-find">
-                            </div>
-                        </div>
-                        <div>
-                            <h3>Tin nhắn</h3>
-                        </div>
+            <section class="tin" id="bangTin">
+                <div class="tao-tin">
+                    <div class="flex">
+                        <h1>TẠO BÀI VIẾT MỚI</h1>
+                        <div id="del" onclick="hide(this)"><i class="fa-solid fa-xmark"></i></div>
                     </div>
-                    <div class="friend">
-                        <ul class="list-friend">
-                            <li id="change">
-                                <a href="#" class="flex">
-                                    <div class="f-img"><img src="/IMG/avatar.jpg" alt=""></div>
-                                    <div class="f-name">
-                                        <h3>Hieu</h3>
-                                        <span>Hoạt động 3 tiếng trước</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <hr>
-                            </li>
-                            <li>
-                                <a href="#" class="flex">
-                                    <div class="f-img"><img src="/IMG/avatar.jpg" alt=""></div>
-                                    <div class="f-name">
-                                        <h3>Hieu</h3>
-                                        <span>Hoạt động 3 tiếng trước</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <hr>
-                            </li>
-                            <li>
-                                <a href="#" class="flex">
-                                    <div class="f-img"><img src="/IMG/avatar.jpg" alt=""></div>
-                                    <div class="f-name">
-                                        <h3>Hieu</h3>
-                                        <span>Hoạt động 3 tiếng trước</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <hr>
-                            </li>
-                            <li>
-                                <a href="#" class="flex">
-                                    <div class="f-img"><img src="/IMG/avatar.jpg" alt=""></div>
-                                    <div class="f-name">
-                                        <h3>Hieu</h3>
-                                        <span>Hoạt động 3 tiếng trước</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="add-img">
+                        <div class="infor-img">
+                            <div>
+                                <i class="fa-regular fa-image fa-beat"></i>
+                            </div>
+                            <div>
+                                <h2>Chọn hình ảnh bạn muốn vào đây !!!!!!</h2>
+                            </div>
+                        </div>
+                        <div class="btn-file">
+                            <label for="fileInput" style="cursor: pointer;">
+                                chọn file
+                                <input type="file" style="display: none;" id="fileInput" onchange="checkImg(this)"
+                                    accept=".jpg, .jpeg, .png, .pdf">
+                            </label>
+                        </div>
                     </div>
                 </div>
-
-                <div class="right">
-                    <div class="mes-top flex">
-                        <div class="inform">
-                            <a href="#" class="flex">
-                                <div class="f-img"><img src="/IMG/avatar.jpg" alt=""></div>
-                                <div class="f-name">
-                                    <h3>Hieu</h3>
-                                    <span>Hoạt động 3 tiếng trước</span>
-    
+            </section>
+            <section class="pic wow animate__animated animate__zoomIn">
+                <div class="next">
+                    <div class="flex" style="justify-content: space-between;">
+                        <span id="back" onclick="back(this)"><i class="fa-solid fa-arrow-left"
+                                title="Quay lại"></i></span>
+                        <h1>TẠO BÀI VIẾT MỚI</h1>
+                        <span id="share" onclick="share(this)">Chia sẻ</span>
+                    </div>
+                    <div class="flex load">
+                        <div class="load-img">
+                            <img src="" alt="ảnh">
+                        </div>
+                        <div class="load-infor">
+                            <div class="flex">
+                                <div class="myImg">
+                                    <img src="IMG/avatar.jpg" alt="">
                                 </div>
-                            </a>
-                        </div>
-    
-                        <div class="icon">
-                            <ul class="flex">
-                                <li><a href="#"><i class="fa-solid fa-phone"></i></a></li>
-                                <li><a href="#"><i class="fa-solid fa-video"></i></a></li>
-                                <li><a href="#"><i class="fa-solid fa-circle-info"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div>
-                        <hr style="padding: 0; margin: 0;">
-                    </div>
-                    <div class="mes-main">
-                        <div class="mes-text flex">
-                            <div class="ip-text">
-                                <input type="text" placeholder="Nhắn tin.....">
+                                <div class="myName">
+                                    <h3>nhunhu</h3>
+                                </div>
                             </div>
-                            <div class="mes-icon flex">
-                                <div>
-                                    <i class="fa-regular fa-heart"></i>
-                                </div>
-                                <div>
-                                    <i class="fa-regular fa-image"></i>
-                                </div>
+                            <div style="margin-top: 10px;">
+                                <textarea cols="40" rows="10" placeholder="Bạn đang nghĩ gì....."></textarea>
                             </div>
                         </div>
                     </div>
-                </div> 
-        </section>
-        </main> -->
+                </div>
+            </section>
+        </main>
     </div>
 
 </body>

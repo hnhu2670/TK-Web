@@ -170,8 +170,8 @@ function check(obj) {
     let b = document.getElementById("unfollow")
     setTimeout(() => {
         b.style.display = "block"
-
     }, 200)
+
     let par = btn.parentNode
     let child = par.querySelector(".del")
 

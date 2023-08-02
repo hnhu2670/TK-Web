@@ -47,6 +47,20 @@ ul.stories li.story {
     margin: 18px;
 }
 
+ul.stories #my_story {
+    position: relative;
+}
+
+ul.stories #my_story i {
+    font-size: 25px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    border-radius: 20%;
+    position: absolute;
+    top: 45%;
+    right: 10%;
+}
+
 ul.stories li.story img {
     width: 100%;
     border-radius: 50%;
@@ -68,6 +82,7 @@ ul.stories::-webkit-scrollbar {
 li.story a>div:last-child>h2 {
     font-size: 20px;
     text-align: center;
+    margin-top: 10px;
 }
 
 .btn {
@@ -227,13 +242,7 @@ li.story a {
     width: 400px;
 } */
 
-.notif li {
-    text-align: center;
-    padding: 0;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    border: 2px;
-}
+
 
 /* bài viết */
 .h-center {
@@ -242,7 +251,7 @@ li.story a {
 }
 
 .list-news {
-    width: 100%;
+    width: 75%;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -334,7 +343,8 @@ li.story a {
     margin-top: 10%;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 600px;
+    height: 650px;
+    position: relative;
 }
 
 
@@ -358,10 +368,16 @@ div.friend-img {
     position: relative;
 }
 
+.ative {
+    position: absolute;
+    right: 5%;
+    top: 70%;
+    ;
+}
+
 div.friend-img>img {
-    width: 100%;
-    width: 45px;
-    height: 45px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
     margin-bottom: 10px;
     background: linear-gradient(gold, rgb(126, 17, 126), red);
@@ -375,7 +391,12 @@ div.friend-img>img:hover {
 
 div.friend-name {
     text-align: center;
-    padding: 13px;
+    padding: 7% 0 0 3%;
+}
+
+div.friend-name span {
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 div.online {
@@ -426,6 +447,54 @@ div.n-heart>div {
 
 div.n-heart>div>img {
     width: 100%;
+}
+
+/* mini chat */
+.mini-chat {
+    position: fixed;
+    background-color: #ffff;
+    width: 20%;
+    height: 50%;
+    bottom: 0;
+    right: 5%;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    flex-direction: column;
+    justify-content: space-between;
+    /* display: none; */
+    z-index: 99;
+}
+
+.mini-chat>div>div:first-child {
+    width: 80%;
+}
+
+.mini-chat .icon {
+    font-size: 30px;
+    margin-left: auto;
+    padding: 10px 0;
+}
+
+.mini-chat .icon i {
+    cursor: pointer;
+}
+
+.mini-chat div.chat {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid navy;
+}
+
+div.chat input {
+    width: 90%;
+    border: none;
+    font-size: 15px;
+    background: none;
+}
+
+div.chat input:focus {
+    outline: none;
 }
 
 /* nút xem thêm */

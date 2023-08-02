@@ -84,22 +84,81 @@ function load_friends() {
                 let a = document.getElementById("frie");
                 a.innerHTML +=
                     `<div class="friend">
-            <a href="#">
-            <div class="friend-img">
-                <img src="${i.img}" id="img-fr" alt="ảnh"> 
-            </div>
-        
-            <div class="friend-name">
-                <span id="name-fr">${i.name}</span>
-            </div>
-            </a>
-            </div>`
+                        <a href="#" class="list" onclick="mini_chat(this)">
+                            <div class="friend-img">
+                                <img src="${i.img}" class="img-fr" alt="ảnh"> 
+                                <div class="ative">
+                                    <i class="fa-solid fa-circle" style="color: #1ac417;"></i>            
+                                </div>
+                            </div>
+                        
+                            <div class="friend-name">
+                                <span class="name-fr">${i.name}</span>
+                            </div>
+                        </a>
+                    </div>`
             }
         });
 
+
+
 };
 
+function mini_chat(obj) {
+    let a = obj
+    let pic = a
+    let form = document.getElementById("form");
+    let img = pic.querySelector(".friend-img img")
+    let name = pic.querySelector(".friend-name span")
+    console.info(name.innerText)
 
+    form.innerHTML = `
+    <div class="mini-chat flex" id="mini-chat">
+                <div class="flex">
+                    <div class="flex">
+                        <div class="friend-img">
+                            <img src="${img.src}" id="mini-img" alt="ảnh">
+                        </div>
+                        <div class="friend-name">
+                            <span id="mini-name">${name.innerText}</span>
+                        </div>
+                    </div>
+                    <div class="icon">
+                        <i onclick="minuschat()" class="fa-solid fa-minus" id="minus"></i>
+                        <i onclick="removechat()" class="fa-solid fa-xmark" id="xmark"></i>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+                <div class="chat">
+                    <i class="fa-regular fa-message"></i>
+                    <input type="text" placeholder="Tin nhắn......">
+                </div>
+            </div>
+    `
+
+}
+
+
+function removechat() {
+    let form = document.getElementById("form");
+    let chat = form.querySelector("#mini-chat");
+    chat.remove();
+}
+
+function minuschat() {
+    let form = document.getElementById("form");
+    let chat = form.querySelector("#mini-chat");
+    if (chat.style.height === "8%") {
+        chat.style.height = "50%";
+    }
+    else {
+        chat.style.height = "8%";
+    }
+
+
+}
 function find_friends(obj) {
     let b = document.getElementById("frie");
     b.innerHTML = "";
@@ -142,12 +201,10 @@ function heart(obj) {
     let colora = getComputedStyle(a);
     let thiscolor = colora.color;
     if (thiscolor === "rgb(255, 0, 0)" || thiscolor === "red") {
-        a.style.color = "navy";
         c.style.display = "none"
 
 
     } else {
-        a.style.color = "red";
         c.style.display = "block"
     }
     let icon = b.querySelectorAll(".sub-heart ul li img")
@@ -201,7 +258,7 @@ function load_news() {
                             <h1>Bài viết đã được ẩn</h1>
                             <button class="btn-restore" onclick="restore_news(this)">Hoàn Tác</button>
                         </div>
-            <div class="list-news" id="list-news${count}">
+            <div class="list-news wow animate__animated animate__zoomIn" id="list-news${count}">
                     <div class="n-name flex">
                         <div class="myImg">
                             <a href="index3.html">
@@ -229,7 +286,7 @@ function load_news() {
                     </div>
                     <div class="n-heart flex">
                         <div class="heart wow">
-                            <img src="/IMG/home/black-heart.png" alt="" onclick="heart(this)">
+                            <img src="IMG/home/black-heart.png" alt="" onclick="heart(this)">
                         </div>
                         <div class="comment">
                             <i class="fa-regular fa-comment" style="color:black"></i>
@@ -251,6 +308,8 @@ function load_news() {
             }
         })
 }
+
+
 
 //ẩn bài viết
 
@@ -357,14 +416,11 @@ function load_btn() {
     setTimeout(() => {
         let box = document.getElementsByClassName("box");
         for (i of box) {
-            // console.log(box);
             let height = parseFloat(i.offsetHeight);
-            // console.log(height);
             if (height <= 100) {
                 let m = i.parentNode;
                 let more = m.getElementsByTagName("button");
                 for (j of more) {
-                    // console.log(more)
                     j.style.display = "none";
                 }
 
@@ -377,12 +433,9 @@ function load_btn() {
 //nút xem thêm 
 function click_more(obj) {
     let btn = obj
-    //alert("hello")
     let par = btn.parentNode
-    //console.log(par)
     let child = par.querySelector(".box")
     let btn_less = par.querySelector(".btn-less")
-    // console.log(child)
     child.style.maxHeight = "none"
     btn.style.display = "none"
     btn_less.style.display = "block"
@@ -401,91 +454,9 @@ function click_less(obj) {
 }
 
 
-// tạo tin - load hình ảnh từ file
-function checkImg(obj) {
-    let fileInput = document.getElementById("fileInput")
-    let a = document.querySelector(".pic")
-    let b = document.querySelector(".tao-tin")
-    b.style.display = "none"
 
-    setTimeout(() => {
-        a.style.display = "block"
-    }, 100)
-    //thuộc tính file trả về một list => files[0] lấy đối tượng đầu tiên
-    let file = fileInput.files[0]
-    let img = document.querySelector(".load-img img")
 
-    let reader = new FileReader()
-    setTimeout(() => {
-        reader.onload = function () {
-            img.src = reader.result
-        }
-        // phương thức readAsDataURL() được sử dụng để bắt đầu đọc file
-        reader.readAsDataURL(file)
-    }, 400)
 
-}
-function add() {
-    let back = document.getElementById("back")
-    let a = document.querySelector(".pic")
-    let b = document.querySelector(".tao-tin")
-    let news = document.getElementById("bangTin")
-    let del = document.getElementById("del")
-    del.onclick = function () {
-        setTimeout(() => {
-            news.style.display = "none"
-        }, 200)
-    }
-    let add = document.getElementById("add-new")
-    add.onclick = function () {
-        setTimeout(() => {
-            news.style.display = "block"
-            b.style.display = "block"
-        }, 200)
-    }
-
-    back.onclick = function () {
-        a.style.display = "none"
-
-        setTimeout(() => {
-            b.style.display = "block"
-        }, 300)
-    }
-    let next = document.getElementById("share")
-    next.onclick = function () {
-        alert("Chia sẻ thành công")
-        setTimeout(() => {
-            a.style.display = "none"
-            news.style.display = "none"
-
-        }, 400)
-    }
-
-}
-
-// thông báo
-function load_note() {
-    let note = document.getElementById("noti")
-    console.log(note)
-    let a = document.querySelector(".note")
-    let count = 0;
-
-    note.onclick = function () {
-        count++;
-        if (count % 2 === 1) {
-            setTimeout(() => {
-                a.style.left = "18%"
-                a.style.right = "60%"
-
-            }, 500)
-
-        }
-        else {
-            a.style.left = "-18%"
-            a.style.right = "100%"
-        }
-    }
-}
 
 
 

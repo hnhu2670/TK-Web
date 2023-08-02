@@ -13,8 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="CSS/Header.css">
     <link rel="stylesheet" href="CSS/Discover.css">
+    <link rel="stylesheet" href="CSS/Add_new.css">
+
     <script src="JS/Discover.js"></script>
-    <link rel="shortcut icon" href="/IMG/LM.png">
+    <script src="JS/Menu.js"></script>
+
+    <link rel="shortcut icon" href="IMG/LM.png">
     <title>Khám phá</title>
 
     <script>
@@ -58,13 +62,32 @@
                         <i class="fa-regular fa-comment-dots"></i>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li id="noti " onclick="load_subnote(this)">
+                    <a href="javascript:;" class="notes">
                         <i class="fa-regular fa-bell"></i>
+                        <ul class="note sub-note wow animate__animated ">
+                            <li>
+                                <h3>Thông báo</h3>
+                            </li>
+                            <li>
+                                <ul class="notif">
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+
+                                </ul>
+                            </li>
+                        </ul>
                     </a>
                 </li>
-                <li>
-                    <a href="#">
+                <li id="add-new" onclick=" tao_tin(this)">
+                    <a href="javascript:;">
                         <i class="fa-regular fa-square-plus"></i>
                     </a>
                 </li>
@@ -77,19 +100,19 @@
         <section class="content">
             <div class="top flex">
                 <div class="t-left">
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh2.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh2.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-center">
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh9.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh9.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-right">
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh3.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh3.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
@@ -97,13 +120,13 @@
             </div>
             <div class="bottom flex">
                 <div>
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh1.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh1.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div>
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh10.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh10.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
@@ -111,19 +134,19 @@
             </div>
             <div class="top flex">
                 <div class="t-left">
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh3.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh3.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-center">
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh9.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh9.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div class="t-right">
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh6.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh6.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
@@ -131,133 +154,71 @@
             </div>
             <div class="bottom flex">
                 <div>
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh1.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh1.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
                 <div>
-                    <div class="animate__animated animate__pulse wow"><img src="/IMG/discover/anh10.jpg" alt=""></div>
+                    <div class="animate__animated animate__pulse wow"><img src="IMG/discover/anh10.jpg" alt=""></div>
                     <div class="bg">
                         <h3 onclick="like_img(this)">Yêu Thích</h3>
                     </div>
                 </div>
             </div>
-            <!-- <div>
-                <div><img src="/IMG/discover/anh1.jpg" alt=""></div>
-                <div>nền</div>
-            </div>
-            <div>
-                <div><img src="/IMG/discover/anh2.jpg" alt=""></div>
-                <div>nền</div>
-            </div>
-            <div>
-                <div><img src="/IMG/discover/anh3.jpg" alt=""></div>
-                <div>nền</div>
-            </div>
-            <div>
-                <div><img src="/IMG/discover/anh4.jpg" alt=""></div>
-                <div>nền</div>
-            </div>
-            <div>
-                <div><img src="/IMG/discover/anh5.jpg" alt=""></div>
-                <div>nền</div>
-            </div>
-            <div>
-                <div><img src="/IMG/discover/anh6.jpg" alt=""></div>
-                <div>nền</div>
-            </div> -->
-            <!-- <div class="left">
-                <div class="myName">
-                    <div class="flex">
-                        <div><h1>dh.Thanh</h1></div>
-                        <div class="find">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-find" >
-                        </div>
-                    </div>
-                    
-                    <div><h3>Tin nhắn</h3></div>
-                </div>
-                <div class="friend">
-                    <ul class="list-friend">
-                        <li  id="change">
-                            <a href="#"  class="flex" >
-                                <div class="f-img"><img src="/IMG/dht.jpg" alt=""></div>
-                                <div class="f-name">
-                                    <h3>Duong Huu Thanh</h3>
-                                    <span>Hoạt động 3 tiếng trước</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li><hr></li>
-                        <li>
-                            <a href="#"  class="flex">
-                                <div class="f-img"><img src="/IMG/dht.jpg" alt=""></div>
-                                <div class="f-name">
-                                    <h3>Duong Huu Thanh</h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li><hr></li>
-                        <li>
-                            <a href="#"  class="flex">
-                                <div class="f-img"><img src="/IMG/dht.jpg" alt=""></div>
-                                <div class="f-name">
-                                    <h3>Duong Huu Thanh</h3>
-                                </div>
-                            </a>
-                        </li>
-                        <li><hr></li>
-                        <li>
-                            <a href="#"  class="flex">
-                                <div class="f-img"><img src="/IMG/dht.jpg" alt=""></div>
-                                <div class="f-name">
-                                    <h3>Duong Huu Thanh</h3>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="right">
-                <div class="mes-top flex">
-                    <div class="inform">
-                        <a href="#"  class="flex">
-                            <div class="f-img"><img src="/IMG/dht.jpg" alt=""></div>
-                            <div class="f-name">
-                                <h3>Duong Huu Thanh</h3>
-                                <span>Hoạt động 3 tiếng trước</span>
 
-                            </div>
-                        </a>
-                    </div>
-    
-                    <div class="icon">
-                        <ul class="flex">
-                            <li><a href="#"><i class="fa-solid fa-phone"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-video"></i></a></li>
-                            <li><a href="#"><i class="fa-solid fa-circle-info"></i></a></li>
-                        </ul>
-                    </div>
+        </section>
+        <section class="tin" id="bangTin">
+            <div class="tao-tin">
+                <div class="flex">
+                    <h1>TẠO BÀI VIẾT MỚI</h1>
+                    <div id="del" onclick="hide(this)"><i class="fa-solid fa-xmark"></i></div>
                 </div>
-                <div ><hr style="padding: 0; margin: 0;"></div>
-                <div class="mes-main">
-                    <div class="mes-text flex">
-                        <div class="ip-text">
-                            <input type="text" placeholder="Nhắn tin....." >
+                <div class="add-img">
+                    <div class="infor-img">
+                        <div>
+                            <i class="fa-regular fa-image fa-beat"></i>
                         </div>
-                        <div class="mes-icon flex">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                            </div>
-                            <div>
-                                <i class="fa-regular fa-image"></i>
-                            </div>
+                        <div>
+                            <h2>Chọn hình ảnh bạn muốn vào đây !!!!!!</h2>
                         </div>
                     </div>
+                    <div class="btn-file">
+                        <label for="fileInput" style="cursor: pointer;">
+                            chọn file
+                            <input type="file" style="display: none;" id="fileInput" onchange="checkImg(this)"
+                                accept=".jpg, .jpeg, .png, .pdf">
+                        </label>
+                    </div>
                 </div>
-            </div> -->
+            </div>
+        </section>
+        <section class="pic wow animate__animated animate__zoomIn">
+            <div class="next">
+                <div class="flex" style="justify-content: space-between;">
+                    <span id="back" onclick="back(this)"><i class="fa-solid fa-arrow-left" title="Quay lại"></i></span>
+                    <h1>TẠO BÀI VIẾT MỚI</h1>
+                    <span id="share" onclick="share(this)">Chia sẻ</span>
+                </div>
+                <div class="flex load">
+                    <div class="load-img">
+                        <img src="" alt="ảnh">
+                    </div>
+                    <div class="load-infor">
+                        <div class="flex">
+                            <div class="myImg">
+                                <img src="IMG/avatar.jpg" alt="">
+                            </div>
+                            <div class="myName">
+                                <h3>nhunhu</h3>
+                            </div>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <textarea cols="40" rows="10" placeholder="Bạn đang nghĩ gì....."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 </body>

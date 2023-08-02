@@ -17,10 +17,12 @@
     <link rel="stylesheet" href="CSS/Add_new.css">
 
     <script src="JS/Home.js"></script>
+    <script src="JS/Menu.js"></script>
+
     <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>MY WEB</title>
-    <link rel="shortcut icon" href="/IMG/LM.png">
+    <link rel="shortcut icon" href="IMG/LM.png">
     <script>
         wow = new WOW(
             {
@@ -35,7 +37,7 @@
     </script>
 </head>
 
-<body onload="load_friends(); load_news(); load_btn();load_note();add()">
+<body onload="load_friends(); load_news(); load_btn();">
     <div id="go">
         <a href="javascript:;"><i class="fa-solid fa-chevron-up"></i></a>
     </div>
@@ -106,11 +108,11 @@
                             <span>TIN NHẮN</span>
                         </a>
                     </li>
-                    <li id="noti">
-                        <a href="#" class="notes">
+                    <li id="noti" onclick="load_note(this)">
+                        <a href="javascript:;" class="notes">
                             <i class="fa-regular fa-bell"></i>
                             <span>THÔNG BÁO</span>
-                            <ul class="note wow animate__animated animate__backInLeft">
+                            <ul class="note wow animate__animated ">
                                 <li>
                                     <h3>Thông báo</h3>
                                 </li>
@@ -131,8 +133,8 @@
                             </ul>
                         </a>
                     </li>
-                    <li id="add-new">
-                        <a href="#">
+                    <li id="add-new" onclick=" tao_tin(this)">
+                        <a href="javascript:;">
                             <i class="fa-regular fa-square-plus"></i>
                             <span>TẠO TIN</span>
                         </a>
@@ -144,7 +146,7 @@
         <main class="h_main">
             <div class="flex">
                 <section id="m-center">
-                    <div style="margin: 3%;">
+                    <div style="margin: 1%;">
                         <div class="search">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-search">
@@ -154,9 +156,23 @@
                     <div class="h-content">
                         <div class="tab-story">
                             <ul class="stories flex">
+                                <li class="story" id="my_story">
+                                    <a href="#">
+                                        <div>
+                                            <img src="IMG/home/av7.jpg" alt="">
+
+                                        </div>
+                                        <div>
+                                            <h2>Tin của bạn</h2>
+                                        </div>
+                                    </a>
+                                    <a href="javascript:;" style="background: none;" onclick=" tao_tin(this)">
+                                        <i class="fa-solid fa-plus fa-beat-fade" style="color: #22df1f;"></i>
+                                    </a>
+                                </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 1</h2>
                                         </div>
@@ -164,15 +180,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
-                                        <div>
-                                            <h2>Tên 2</h2>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="story">
-                                    <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 3</h2>
                                         </div>
@@ -180,7 +188,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 4</h2>
                                         </div>
@@ -188,7 +196,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 5</h2>
                                         </div>
@@ -196,7 +204,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 6</h2>
                                         </div>
@@ -204,7 +212,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 1</h2>
                                         </div>
@@ -212,7 +220,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 2</h2>
                                         </div>
@@ -220,7 +228,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 3</h2>
                                         </div>
@@ -228,7 +236,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 4</h2>
                                         </div>
@@ -236,7 +244,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 5</h2>
                                         </div>
@@ -244,7 +252,7 @@
                                 </li>
                                 <li class="story">
                                     <a href="#">
-                                        <div><img src="/IMG/home/av1.jpg" alt=""></div>
+                                        <div><img src="IMG/home/av1.jpg" alt=""></div>
                                         <div>
                                             <h2>Tên 6</h2>
                                         </div>
@@ -298,7 +306,10 @@
                             <ul>
                                 <li class="friend1">
                                     <div id="frie">
-
+                                        <!-- load json -->
+                                        <div id="form">
+                                            <!-- load js -->
+                                        </div>
 
                                     </div>
                                 </li>
@@ -307,11 +318,12 @@
                     </div>
                 </section>
             </div>
+            <!-- phần phụ của tạo tin -->
             <section class="tin" id="bangTin">
                 <div class="tao-tin">
                     <div class="flex">
                         <h1>TẠO BÀI VIẾT MỚI</h1>
-                        <div id="del"><i class="fa-solid fa-xmark"></i></div>
+                        <div id="del" onclick="hide(this)"><i class="fa-solid fa-xmark"></i></div>
                     </div>
                     <div class="add-img">
                         <div class="infor-img">
@@ -336,9 +348,10 @@
             <section class="pic wow animate__animated animate__zoomIn">
                 <div class="next">
                     <div class="flex" style="justify-content: space-between;">
-                        <span id="back"><i class="fa-solid fa-arrow-left" title="Quay lại"></i></span>
+                        <span id="back" onclick="back(this)"><i class="fa-solid fa-arrow-left"
+                                title="Quay lại"></i></span>
                         <h1>TẠO BÀI VIẾT MỚI</h1>
-                        <span id="share">Chia sẻ</span>
+                        <span id="share" onclick="share(this)">Chia sẻ</span>
                     </div>
                     <div class="flex load">
                         <div class="load-img">
