@@ -135,7 +135,6 @@ nav.menu .name {
 
 .res-menu>ul {
     width: 100%;
-    flex-wrap: wrap;
 }
 
 
@@ -160,25 +159,7 @@ nav.menu .name {
     width: 100%;
 }
 
-@media (max-width: 900px) {
 
-    .res-menu {
-        display: block;
-    }
-
-    .h_header {
-        display: none;
-    }
-
-    #m-right {
-        display: none;
-    }
-
-    .h_main {
-        margin-left: 0;
-
-    }
-}
 
 /* phần right của trang home */
 section#m-right {
@@ -220,9 +201,7 @@ ul.note {
     left: -18%;
     right: 100%;
     bottom: 0;
-    overflow: hidden;
     background-color: aliceblue;
-    opacity: 0;
     z-index: -999;
 }
 

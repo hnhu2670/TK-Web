@@ -1,0 +1,57 @@
+section {
+    margin-bottom: 10px;
+    border-bottom: 1px solid gainsboro;
+}
+
+h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+
+section.top>div {
+    margin: 20px 20px 0 0;
+}
+
+section.top>div i {
+    font-size: 25px;
+    padding-top: 5px;
+}
+
+section.profile div.myImg {
+    width: 17%;
+    margin-right: 5%;
+}
+
+section.profile .myName h3 {
+    font-size: 20px;
+}
+
+section.profile .myName span {
+    font-size: 15px;
+    color: gray;
+}
+
+section.content {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin: 25px auto;
+    border-bottom: none;
+}
+
+section.content>div {
+    margin-bottom: 20px;
+    width: 48%;
+    padding: 20px 0;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 1s;
+
+}
+
+section.content>div:hover {
+    background-color: rgb(253, 216, 216);
+}

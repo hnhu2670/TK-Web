@@ -11,7 +11,7 @@ section.left {
 }
 
 div.myName {
-    padding: 45px 20px;
+    padding: 36px 20px;
     /* height: 100px; */
 }
 
@@ -77,6 +77,8 @@ span {
 /* right */
 section.right {
     width: 70%;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 div.mes-top {
@@ -109,10 +111,9 @@ div.icon>ul>li i {
 }
 
 div.mes-bottom {
-    position: fixed;
+
     bottom: 20px;
-    left: 37%;
-    right: 3%;
+    margin: 0 0 2% 3%;
     border: 1px solid black;
     border-radius: 20px;
 }

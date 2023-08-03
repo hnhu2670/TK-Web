@@ -27,12 +27,12 @@
 .img-Profile div.name {
     width: 75%;
     margin: 0px auto;
-    justify-content: space-around;
+    justify-content: space-between;
     /* background-color: azure; */
 }
 
 div.avatar {
-    width: 15%;
+    width: 25%;
     border-radius: 50%;
     /* border: 3px solid white; */
     /* margin-right: 20px; */
@@ -48,17 +48,17 @@ div.avatar img {
 }
 
 div.fname {
-    width: 20%;
+    width: 30%;
 
 }
 
 .img-Profile h1 {
     font-size: 2.5rem;
-    padding-bottom: 1rem;
 }
 
 .img-Profile span {
     font-size: 1.5rem;
+    padding-left: 10%;
 }
 
 div.infor {

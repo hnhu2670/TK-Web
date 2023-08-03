@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="CSS/Header.css">
     <link rel="stylesheet" href="CSS/Discover.css">
     <link rel="stylesheet" href="CSS/Add_new.css">
+    <link rel="stylesheet" href="CSS/Pesonsive.css" media="screen and (max-width: 650px)">
 
     <script src="JS/Discover.js"></script>
     <script src="JS/Menu.js"></script>
@@ -37,6 +38,62 @@
 </head>
 
 <body>
+    <header class="res-header">
+        <nav class="res-menu">
+            <ul class="flex">
+                <li class="wow animate__animated animate__zoomIn">
+                    <div>
+                        <a href="#">
+                            <img src="IMG/LM.png" alt="LOGO" class="logo">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index1.html">
+                        <i class="fa-regular fa-compass"></i>
+                    </a>
+                </li>
+                <li id="noti">
+                    <a href="javascript:;" class="notes">
+                        <i class="fa-regular fa-bell"></i>
+                        <ul class="note wow animate__animated ">
+                            <li>
+                                <h3>Thông báo</h3>
+                            </li>
+                            <li>
+                                <ul class="notif">
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+                <li id="add-new" onclick=" tao_tin(this)">
+                    <a href="javascript:;">
+                        <i class="fa-regular fa-square-plus"></i> </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-bars"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <header class="h_header header">
         <nav class="sub-menu menu flex">
             <ul>

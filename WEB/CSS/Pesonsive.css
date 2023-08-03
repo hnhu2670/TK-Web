@@ -1,0 +1,286 @@
+.main {
+    margin: 0 !important;
+}
+
+/* trang index */
+#m-center {
+    width: 100%;
+    border-right: none;
+}
+
+/* story */
+ul.stories li.story {
+    width: 21%;
+    margin: 5px;
+}
+
+li.story a>div:first-child {
+    width: 50px;
+    height: 50px;
+    padding: 2px;
+
+}
+
+li.story a>div:last-child>h2 {
+    font-size: 12px;
+}
+
+.btn {
+    font-size: 20px;
+    top: 20%;
+}
+
+ul.stories #my_story i {
+    font-size: 15px;
+}
+
+/* thanh tìm kiếm */
+.search {
+    width: 80%;
+    padding: 5px;
+}
+
+input#ip-search {
+    font-size: 13px;
+}
+
+.list-news {
+    width: 95%;
+    padding: 10px;
+}
+
+.myName {
+    padding-top: 0;
+}
+
+.myName h3 {
+    padding-top: 10px;
+    font-size: 25px;
+}
+
+.list-news i {
+    font-size: 25px;
+}
+
+.n-name .myName h3 {
+    padding: 20% 0;
+    font-size: 20px;
+}
+
+.box p {
+    font-size: 13px;
+}
+
+.n-heart>div>i {
+    font-size: 25px;
+}
+
+div.n-heart>div {
+    width: 8.5%;
+}
+
+.sub-heart {
+    width: 140px !important;
+}
+
+button {
+    font-size: 10px;
+}
+
+.res-menu {
+    display: block;
+}
+
+.h_header {
+    display: none;
+}
+
+#m-right {
+    display: none;
+}
+
+.h_main {
+    margin-left: 0;
+
+}
+
+/* tạo tin */
+section.tin>div.tao-tin {
+    width: 55%;
+}
+
+div>h1 {
+    font-size: 20px;
+}
+
+div#del {
+    font-size: 20px;
+}
+
+div.infor-img>div {
+    font-size: 15px;
+    padding: 10px;
+}
+
+div.infor-img>div>i {
+    font-size: 50px;
+}
+
+div.infor-img>div>h2 {
+    font-size: 15px;
+
+}
+
+.btn-file {
+    font-size: 15px;
+    width: 70px;
+}
+
+section.pic>div.next {
+    width: 80%;
+    height: 320px;
+}
+
+div.next span {
+    font-size: 15px;
+}
+
+div.next div.load-img {
+    height: 100%;
+}
+
+.load-infor .myImg {
+    width: 25%;
+}
+
+.load-infor .myName h3 {
+    font-size: 20px;
+}
+
+div>h1 {
+    font-size: 20px;
+}
+
+div>textarea {
+    width: 100%;
+    padding: 0;
+    font-size: 15px;
+}
+
+/* thông báo */
+ul.note {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 10%;
+    z-index: 99;
+    bottom: 0;
+}
+
+/* index 3 */
+.main-Profile {
+    width: 100%;
+    /* padding: 0 10px; */
+}
+
+.img-Profile {
+    margin-bottom: 20px;
+}
+
+.img-Profile div.img {
+    width: 100%;
+    height: 200px;
+}
+
+div.avatar {
+    width: 35%;
+    margin-top: 5%;
+    /* margin-top: -40%; */
+}
+
+.img-Profile div.name {
+    flex-direction: column;
+}
+
+div.fname {
+    width: 70%;
+
+}
+
+div.fname>h1,
+div.fname>span {
+    font-size: 25px;
+    padding: 0;
+}
+
+div.infor {
+    width: 100%;
+    justify-content: space-between;
+}
+
+div.infor>div a {
+    font-size: 16px;
+}
+
+div.infor div.setting i {
+    font-size: 23px !important;
+}
+
+.menu-top ul {
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.items {
+    flex-direction: column;
+}
+
+.item {
+    width: 100%;
+}
+
+.fix {
+    width: 85%;
+
+}
+
+.fix>div h2 {
+    font-size: 20px;
+}
+
+.fix>div>div>i {
+    font-size: 30px;
+}
+
+div.picture>div.pic {
+    width: 70px;
+    height: 70px;
+}
+
+div.user>h3 {
+    padding-top: 15px;
+}
+
+section.unfollow {
+    background-color: rgba(10, 29, 35, 0.5);
+}
+
+.unfl {
+    margin-top: 40%;
+    width: 90%;
+    font-size: 20px;
+}
+
+.unfl>ul>li>button {
+    font-size: 20px;
+}
+
+/* index 1 */
+.bg h3 {
+    width: 50px;
+    padding: 5px;
+    font-size: 10px;
+
+}

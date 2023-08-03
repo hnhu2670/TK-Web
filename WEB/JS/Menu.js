@@ -19,6 +19,7 @@ function load_note(obj) {
     }
 
 }
+
 function load_subnote(obj) {
     let a = document.querySelector(".note")
     if (a.style.left === "-18%") {
@@ -35,9 +36,21 @@ function load_subnote(obj) {
         a.style.zIndex = -999
         a.style.opacity = 0
     }
-
 }
 
+// function res_note(obj) {
+//     let a = document.querySelector(".note")
+//     console.log(a)
+//     a.remove
+// }
+
+$(document).ready(function () {
+    $(".note").hide();
+
+    $("#noti").click(function () {
+        $(".note").toggle();
+    });
+});
 // tạo tin - load hình ảnh từ file
 function checkImg(obj) {
     let fileInput = document.getElementById("fileInput")
@@ -97,3 +110,26 @@ function hide(obj) {
         news.style.display = "none"
     }, 200)
 }
+
+// cố định menu
+$(window).on("load", function () {
+    $(document).ready(function () {
+
+        $(window).scroll(() => {
+            if ($(this).scrollTop() >= 50) {
+                // $(".sub").slideDown(500)
+                $("#res-header").css({
+                    "position": "fixed",
+                    "z-index": 9999,
+                    "background-color": "gray"
+                })
+            }
+            else {
+                $("#res-header").css({
+                    "position": "unset",
+                    "background": "none"
+                })
+            }
+        })
+    })
+});

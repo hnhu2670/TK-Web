@@ -95,11 +95,11 @@ li.story a>div:last-child>h2 {
 }
 
 .left {
-    left: 20px;
+    left: 0;
 }
 
 .right {
-    right: 20px;
+    right: 0;
 }
 
 */
@@ -285,9 +285,10 @@ li.story a {
 
 }
 
+/* 
 .n-name {
     height: 120px;
-}
+} */
 
 .n-name>div {
     margin-right: 20px;
@@ -550,49 +551,4 @@ div.heart>i:hover .sub-heart {
 .sub-heart ul li>img {
     width: 100%;
     padding: 5px;
-}
-
-
-@media (max-width: 900px) {
-    #m-center {
-        width: 100%;
-    }
-
-    .list-news {
-        width: 95%;
-        padding: 10px;
-    }
-
-    .myName {
-        padding-top: 0;
-    }
-
-    .myName h3 {
-        padding-top: 10px;
-        font-size: 25px;
-    }
-
-    .list-news i {
-        font-size: 25px;
-    }
-
-    .box p {
-        font-size: 13px;
-    }
-
-    .n-heart>div>i {
-        font-size: 25px;
-    }
-
-    div.n-heart>div {
-        width: 8.5%;
-    }
-
-    .sub-heart {
-        width: 140px !important;
-    }
-
-    button {
-        font-size: 10px;
-    }
 }
