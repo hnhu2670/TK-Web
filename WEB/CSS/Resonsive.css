@@ -168,13 +168,14 @@ div>textarea {
 }
 
 /* thông báo */
-ul.note {
-    position: absolute;
+ul#res-note {
+    position: fixed;
     left: 0;
     right: 0;
-    top: 10%;
-    z-index: 99;
-    bottom: 0;
+    top: -30%;
+    z-index: 999;
+    bottom: 100%;
+    background-color: aliceblue;
 }
 
 /* index 3 */
