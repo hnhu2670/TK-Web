@@ -1,0 +1,27 @@
+section#m-right{
+    display: none;
+}
+#m-center{
+    width: 100%;
+}
+.h_header{
+    width: 10%;
+}
+nav.sub-menu ul li:first-child{
+    padding: 0;
+    width: 100px;
+    padding-top: 10px;    
+}
+nav.sub-menu ul li{
+    line-height: 4;
+    margin: 0px auto;
+}
+.name .logo{
+    padding: 0;
+}
+nav.sub-menu ul li i{
+    font-size: 20px;
+}
+.h_main{
+    width: 85%;
+}

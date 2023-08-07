@@ -12,7 +12,9 @@ ul li {
 a {
     text-decoration: none;
 }
-
+.change{
+    color: red;
+}
 /* go to top */
 #go {
     width: 50px;
@@ -139,8 +141,8 @@ nav.menu .name {
 
 
 .res-menu>ul>li:first-child {
-    width: 20%;
-    margin-top: 10px;
+    width: 25%;
+    margin: 10px 10px 0 0;
     padding: 0;
 }
 
@@ -195,19 +197,40 @@ div.myName div.lname {
 }
 
 /* thông báo */
-ul.note {
+/* .note {
     position: fixed;
     top: 0;
-    left: -18%;
+    left: 18%;
     right: 100%;
     bottom: 0;
     background-color: aliceblue;
-    z-index: -999;
-}
-
-.notif li {
+    z-index: 999;
+} */
+#thongBao {
+    top: 0;
+    bottom: 0;
+    left: -18%;
+    right: 100%;
+    transition: transform 0.3s ease-in-out;
+    background-color: #ffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 0 10px 10px 0;
+    position: fixed;
+ }
+ #thongBao>li:first-child{
+    margin: 0;
+    border-bottom: 1px solid navy;
     text-align: center;
-    padding: 0;
+}
+ .notif{
+    height:700px;
+    overflow-y: scroll;
+    overflow-x: auto;
+
+ }
+.notif li {
+    /* text-align: center; */
+    padding: 0 0 0 30px;
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     border: 2px;

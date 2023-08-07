@@ -1,0 +1,43 @@
+section.top {
+    width: 100%;
+}
+
+
+section.top div.name>div {
+    margin: 20px;
+    font-size: 20px;
+
+}
+
+div.search {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid navy;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+div.search input {
+    border: none;
+    background: none;
+    width: 85%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+div.search input:focus {
+    outline: none;
+}
+
+section.list .f-img {
+    width: 25%;
+}
+
+section.list div.f-name h3 {
+    font-size: 25px;
+}
+
+section.list div.f-name {
+    margin: 15px 0 0 15px;
+    font-size: 20px;
+}

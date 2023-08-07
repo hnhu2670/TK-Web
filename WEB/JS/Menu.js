@@ -1,40 +1,33 @@
+
 // thông báo
 function load_note(obj) {
-    let a = document.querySelector(".note")
-    if (a.style.left === "-18%") {
-        setTimeout(() => {
-            a.style.left = "18%"
-            a.style.right = "60%"
-            a.style.zIndex = 999
-            a.style.opacity = 1;
-
-        }, 100)
-
-    }
-    else {
+    let a = document.getElementById("thongBao")
+    console.log(a)
+   if (a.style.left ==="18%") {
+      setTimeout(()=>{
         a.style.left = "-18%"
         a.style.right = "100%"
-        a.style.zIndex = -999
-        a.style.opacity = 0
-    }
+      },300)
+   } else {
+    setTimeout(()=>{
+        a.style.left = "18%"
+        a.style.right = "60%"
 
+      },300)    
+   }
 }
 
 function load_subnote(obj) {
-    let a = document.querySelector(".note")
+    let a = document.getElementById("thongBao")
     if (a.style.left === "-18%") {
         setTimeout(() => {
-            a.style.left = "8.2%"
+            a.style.left = "8.1%"
             a.style.right = "70%"
-            a.style.zIndex = 999
-            a.style.opacity = 1;
         }, 10)
     }
     else {
         a.style.left = "-18%"
         a.style.right = "100%"
-        a.style.zIndex = -999
-        a.style.opacity = 0
     }
 }
 
@@ -44,13 +37,13 @@ function load_subnote(obj) {
 //     a.remove
 // }
 
-$(document).ready(function () {
-    $(".note").hide();
+// $(document).ready(function () {
+//     $(".note").hide();
 
-    $("#noti").click(function () {
-        $(".note").toggle();
-    });
-});
+//     $("#noti").click(function () {
+//         $(".note").toggle();
+//     });
+// });
 // tạo tin - load hình ảnh từ file
 function checkImg(obj) {
     let fileInput = document.getElementById("fileInput")
@@ -117,17 +110,19 @@ $(window).on("load", function () {
 
         $(window).scroll(() => {
             if ($(this).scrollTop() >= 50) {
-                // $(".sub").slideDown(500)
-                $("#res-header").css({
-                    "position": "fixed",
-                    "z-index": 9999,
-                    "background-color": "gray"
-                })
+                    $("#res-header").css({
+                        "position": "fixed",
+                        "z-index": 9999,
+                        "background-color": "gray",
+                        "margin-right":"16px"
+                    })
+                
             }
             else {
                 $("#res-header").css({
                     "position": "unset",
-                    "background": "none"
+                    "background": "none",
+                    "margin-right":"0px"
                 })
             }
         })

@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="CSS/Header.css">
     <link rel="stylesheet" href="CSS/Add_new.css">
     <link rel="stylesheet" href="CSS/Message.css">
+    <!-- responsive -->
+    <link rel="stylesheet" href="CSS/Resonsive.css" media="screen and (max-width: 650px)">
+
 
     <link rel="shortcut icon" href="IMG/LM.png">
     <script src="JS/Message.js"></script>
@@ -34,7 +37,7 @@
 </head>
 
 <body onload="active()">
-    <header class="res-header">
+    <!-- <header class="res-header">
         <nav class="res-menu">
             <ul class="flex">
                 <li class="wow animate__animated animate__zoomIn">
@@ -71,7 +74,7 @@
                 </li>
             </ul>
         </nav>
-    </header>
+    </header> -->
     <div class="flex">
         <header class="h_header header">
             <nav class="sub-menu menu flex">
@@ -98,12 +101,12 @@
                             <i class="fa-regular fa-comment-dots"></i>
                         </a>
                     </li>
-                    <li id="noti " onclick="load_subnote(this)">
+                    <li id="noti" onclick="load_subnote(this)">
                         <a href="javascript:;" class="notes">
                             <i class="fa-regular fa-bell"></i>
-                            <ul class="note sub-note wow animate__animated ">
+                            <ul class="note wow animate__animated "id="thongBao">
                                 <li>
-                                    <h3>Thông báo</h3>
+                                    <h3>THÔNG BÁO</h3>
                                 </li>
                                 <li>
                                     <ul class="notif">
@@ -116,7 +119,7 @@
                                         <li>Thông báo 1</li>
                                         <li>Thông báo 2</li>
                                         <li>Thông báo 3</li>
-
+    
                                     </ul>
                                 </li>
                             </ul>
@@ -136,6 +139,7 @@
                 <section class="left">
                     <div class="myName">
                         <div class="flex">
+                            <div class="arrow-left"><a href="index4.html"><i class="fa-solid fa-arrow-left"></i></a></div>
                             <div>
                                 <h1>Tin nhắn</h1>
                             </div>
@@ -156,7 +160,10 @@
                     <div class="mes-top flex">
                         <div class="inform">
                             <a href="#" class="flex">
-                                <div class="f-img" id="pic"><img src="IMG/profile/cat10.jpg" alt=""></div>
+                                <div class="f-img" id="pic">
+                                    <img src="IMG/profile/cat10.jpg" alt="">
+                                    <span class="s-name">Như</span>
+                                </div>
                                 <div class="f-name" id="text">
                                     <h3>Như</h3>
                                     <span>Hoạt động 3 tiếng trước</span>

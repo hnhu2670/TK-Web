@@ -14,6 +14,9 @@ div.myName {
     padding: 36px 20px;
     /* height: 100px; */
 }
+div.myName div.arrow-left{
+    display: none;
+}
 
 div.myName h1 {
     font-size: 30px;
@@ -59,7 +62,9 @@ div.f-img>img {
     width: 100%;
     border-radius: 50%;
 }
-
+div.f-img .name{
+    display: none;
+}
 div.f-name {
     margin: 30px 0 0 30px;
     font-size: 23px;
@@ -80,7 +85,9 @@ section.right {
     flex-direction: column;
     justify-content: space-between;
 }
-
+span.s-name{
+    display: none;
+}
 div.mes-top {
     padding: 15px;
     border-bottom: 0.5px solid gray;
