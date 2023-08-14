@@ -66,4 +66,20 @@ function click_Name(obj) {
 
 
 }
-
+function search(obj){
+    // let s = document.getElementById("ip-search").value
+    let s = obj.value
+    
+    let n = document.querySelectorAll(".f-name > h3")
+    for (let i=0;i<n.length;i++)
+    {
+        if(n[i].textContent.indexOf(s) >= 0)
+        {
+            n[i].style.color="gold"
+        }
+        else{
+            alert("Không tìm thấy")
+            break
+        }
+    }
+}

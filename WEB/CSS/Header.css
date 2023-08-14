@@ -15,6 +15,12 @@ a {
 .change{
     color: red;
 }
+.active{
+    /* background-color: #e0f0f5; */
+    border-bottom:2px solid #248299;
+    margin: 0 30px;
+
+}
 /* go to top */
 #go {
     width: 50px;
@@ -222,7 +228,7 @@ div.myName div.lname {
     border-bottom: 1px solid navy;
     text-align: center;
 }
- .notif{
+#thongBao .notif{
     height:700px;
     overflow-y: scroll;
     overflow-x: auto;

@@ -38,10 +38,10 @@
     </script>
 </head>
 
-<body onload="load_item();load_anh(); load_follow()">
-    <header class="res-header">
+<body onload="load_item(); load_follow()">
+    <header class="res-header" id="res-header">
         <nav class="res-menu">
-            <ul class="flex">
+            <ul class="flex tab-res">
                 <li class="wow animate__animated animate__zoomIn">
                     <div>
                         <a href="#">
@@ -59,15 +59,16 @@
                         <i class="fa-regular fa-compass"></i>
                     </a>
                 </li>
-                <li id="noti">
-                    <a href="javascript:;" class="notes">
+                <li id="noti" >
+                    <a href="javascript:;" class="notes" onclick="load_resnote(this)">
                         <i class="fa-regular fa-bell"></i>
-                        <ul class="note wow animate__animated ">
+                        <ul class="wow animate__animated " id="res-note">
+                            <li class="arrow-up"></li>
                             <li>
-                                <h3>Thông báo</h3>
+                                <h3>THÔNG BÁO</h3>
                             </li>
                             <li>
-                                <ul class="notif">
+                                <ul>
                                     <li>Thông báo 1</li>
                                     <li>Thông báo 2</li>
                                     <li>Thông báo 3</li>
@@ -77,8 +78,8 @@
                                     <li>Thông báo 1</li>
                                     <li>Thông báo 2</li>
                                     <li>Thông báo 3</li>
-
                                 </ul>
+                                
                             </li>
                         </ul>
                     </a>
@@ -97,7 +98,7 @@
     </header>
     <header class="h_header header">
         <nav class="sub-menu menu flex">
-            <ul>
+            <ul class="tab-menu">
                 <li class="wow animate__animated animate__zoomIn">
                     <div class="name">
                         <a href="#">
@@ -219,27 +220,43 @@
             <!-- <nội dung trang cá nhân -->
             <div class="main-Profile">
                 <div class="menu-top">
-                    <ul class="flex list">
-                        <li><a href="javascript:;">BÀI VIẾT</a>
-                            <div class="items flex" id="items">
-                                <!-- load ảnh từ json -->
+                    <ul class="tab flex">
+                        <li class="actives"><a href="#tab1">BÀI VIẾT</a></li>
+                        <li><a href="#tab2">YÊU THÍCH</a></li>
+                        <li><a href="#tab3">ĐƯỢC GẮN THẺ</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="show" id="tab1">
+                            <div id="items" class="items flex">
+                                <div class="item">
+                                    <img src="${i.img}" alt="">
+                                    <div class="bg-top ">
+                                        <div class="flex icon">
+                                            <div class="icon-heart wow">
+                                                <i class="fa-solid fa-heart" onclick="click_heart(this)"></i>
+                                            </div>
+                                            <div class="icon-share">
+                                                <i class="fa-regular fa-paper-plane "></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </li>
-                        <li><a href="javascript:;">YÊU THÍCH</a>
-                            <div class="items text" style="display: none; z-index: 1; background-color: aliceblue;"
-                                id="like">
+                        </div>
+                        <div id="tab2">
+                            <div class="text items" id="like">
                                 <i class="fa-regular fa-bookmark"></i>
                                 <h2>Chưa có bài viết yêu thích</h2>
                             </div>
-                        </li>
-                        <li><a href="javascript:;">ĐƯỢC GẮN THẺ</a>
-                            <div class="items text" style="display: none; z-index: 1; background-color: aliceblue;"
-                                id="tag">
+                        </div>
+                        <div id="tab3">
+                            <div class="text items" id="tag">
                                 <i class="fa-solid fa-tags"></i>
                                 <h2>Chưa có bài viết được gắn thẻ</h2>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>

@@ -23,7 +23,7 @@
 
     <!-- responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MY WEB</title>
+    <title>Life and Smile</title>
     <link rel="shortcut icon" href="IMG/LM.png">
     <script>
         wow = new WOW(
@@ -39,13 +39,13 @@
     </script>
 </head>
 
-<body onload="load_friends(); load_news(); load_btn();">
+<body onload="load_friends(); load_news(); load_btn();click_story()">
     <div id="go">
         <a href="javascript:;"><i class="fa-solid fa-chevron-up"></i></a>
     </div>
     <header class="res-header" id="res-header">
         <nav class="res-menu">
-            <ul class="flex">
+            <ul class="flex tab-res">
                 <li class="wow animate__animated animate__zoomIn">
                     <div>
                         <a href="#">
@@ -53,7 +53,7 @@
                         </a>
                     </div>
                 </li>
-                <li>
+                <li class="actived">
                     <a href="index.html">
                         <i class="fa-solid fa-house"></i>
                     </a>
@@ -63,15 +63,16 @@
                         <i class="fa-regular fa-compass"></i>
                     </a>
                 </li>
-                <li id="noti" >
+                <li id="noti">
                     <a href="javascript:;" class="notes" onclick="load_resnote(this)">
                         <i class="fa-regular fa-bell"></i>
-                        <ul class="wow animate__animated" id="res-note">
+                        <ul class="wow animate__animated " id="res-note">
+                            <li class="arrow-up"></li>
                             <li>
-                                <h3>Thông báo</h3>
+                                <h3>THÔNG BÁO</h3>
                             </li>
                             <li>
-                                <ul class="notif">
+                                <ul>
                                     <li>Thông báo 1</li>
                                     <li>Thông báo 2</li>
                                     <li>Thông báo 3</li>
@@ -81,8 +82,8 @@
                                     <li>Thông báo 1</li>
                                     <li>Thông báo 2</li>
                                     <li>Thông báo 3</li>
-
                                 </ul>
+
                             </li>
                         </ul>
                     </a>
@@ -102,15 +103,15 @@
     <div class="flex">
         <header class="h_header">
             <nav class="flex menu">
-                <ul>
-                    <li class="wow animate__animated animate__jackInTheBox">
+                <ul class="tab-menu">
+                    <li class="wow animate__animated animate__jackInTheBox ">
                         <div class="name">
                             <a href="#">
                                 <img src="IMG/LM.png" alt="LOGO">
                             </a>
                         </div>
                     </li>
-                    <li>
+                    <li class="active" id="active">
                         <a href="index.html">
                             <i class="fa-solid fa-house"></i>
                             <span>TRANG CHỦ</span>
@@ -132,7 +133,7 @@
                         <a href="javascript:;" class="notes">
                             <i class="fa-regular fa-bell"></i>
                             <span>THÔNG BÁO</span>
-                            <ul class="note wow animate__animated "id="thongBao">
+                            <ul class="note wow animate__animated " id="thongBao">
                                 <li>
                                     <h3>THÔNG BÁO</h3>
                                 </li>
@@ -169,13 +170,92 @@
                     <div style="margin: 2%;">
                         <div class="search">
                             <i class="fa-solid fa-magnifying-glass"></i>
-                            <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-search">
+                            <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-search"
+                                onchange="search(this)">
                         </div>
                     </div>
-
                     <div class="h-content">
-                        <div class="tab-story">
-                            <ul class="stories flex">
+                        <div class="wrapper">
+                            <i class="fa-solid fa-angle-left" id="left"></i>
+                            <ul class="carousel flex">
+                                <li class="my-stories">
+                                    <div><img src="IMG/home/av7.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Tin của bạn</h2>
+                                    </div>
+                                    <i class="fa-solid fa-plus fa-beat-fade add" style="color: #22df1f;"></i>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av1.jpg" alt=""></div>
+                                    <div>
+                                        <h2>An</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av2.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Th.Hoa</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av3.jpg" alt=""></div>
+                                    <div>
+                                        <h2>NhuNhu</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av4.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Hieu</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av6.jpg" alt=""></div>
+                                    <div>
+                                        <h2>ViVi</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av1.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Loan</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av9.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Nguyen</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av3.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Bao</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av5.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Phuoc</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av1.jpg" alt=""></div>
+                                    <div>
+                                        <h2>TrThinh</h2>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><img src="IMG/home/av2.jpg" alt=""></div>
+                                    <div>
+                                        <h2>Hoa</h2>
+                                    </div>
+                                </li>
+                            </ul>
+                            <i class="fa-solid fa-angle-right" id="right"></i>
+                        </div>
+                        <!-- <div class="tab-story">
+                            <ul class="stories flex" id="stories">
                                 <li class="story" id="my_story">
                                     <a href="#">
                                         <div>
@@ -279,13 +359,13 @@
                                     </a>
                                 </li>
                             </ul>
-                            <button class="btn left" onclick="changeLeft()">
+                            <button class="btn left" id="left" >
                                 <i class="fa-solid fa-circle-chevron-left"></i>
                             </button>
-                            <button class="btn right " onclick="changeRight()">
+                            <button class="btn right ">
                                 <i class="fa-solid fa-circle-chevron-right"></i>
                             </button>
-                        </div>
+                        </div> -->
                         <!-- load tin -->
                         <div class="h-center" id="h-load-news">
 

@@ -1,3 +1,24 @@
+function click_story() {
+    const carousel = document.querySelector(".carousel")
+    // console.log(carousel)
+    firstImg = carousel.querySelectorAll("li")[0]
+
+    arrowIcons = document.querySelectorAll(".wrapper i")
+
+    let firstImgWidth = firstImg.clientWidth + 50
+    console.log(firstImgWidth)
+    arrowIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            console.log(firstImgWidth)
+            if (icon.id === "left") {
+                carousel.scrollLeft -= firstImgWidth
+            }
+            else { carousel.scrollLeft += firstImgWidth }
+        })
+
+    });
+}
+
 function changeLeft() {
     let a = document.getElementById("stories");
     let d = 50;
@@ -159,6 +180,24 @@ function minuschat() {
 
 
 }
+// tìm kiếm trang chủ
+function search(obj) {
+    // let s = document.getElementById("ip-search").value
+    let s = obj.value
+    console.log(s)
+    let n = document.querySelectorAll(".myName > a >h3")
+    for (let i = 0; i < n.length; i++) {
+        if (n[i].textContent.indexOf(s) >= 0) {
+            n[i].style.color = "gold"
+        }
+        else {
+            alert("Không tìm thấy")
+            break
+        }
+    }
+}
+
+// tìm kiếm bạn
 function find_friends(obj) {
     let b = document.getElementById("frie");
     b.innerHTML = "";

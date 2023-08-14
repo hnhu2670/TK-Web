@@ -80,40 +80,59 @@ function load_item() {
             }
         })
 }
+// click menu
+$(document).ready(()=>{
+    $(".tab-content>div:not(:first-child)").hide()
+    $(".tab a").click(function(){
+        setTimeout(()=>{
+            $(".tab>li").removeClass("actives")
+        $(this).parent().addClass("actives")
 
-function load_anh() {
-    // alert("hello")
-    let item = document.getElementById("item")
-    let like = document.getElementById("like")
-    let tag = document.getElementById("tag")
-    let ds = document.querySelectorAll(".list>li")
-    // console.log(ds)
-    for (let i = 0; i < ds.length; i++)
-        ds[i].onclick = function () {
-            if (ds[i] == ds[0]) {
-                ds[0].style.borderTop = "5px solid gray";
-                ds[1].style.borderTop = "none";
-                ds[2].style.borderTop = "none";
-                tag.style.display = "none"
-                like.style.display = "none"
-            }
-            if (ds[i] == ds[1]) {
-                ds[0].style.borderTop = "none";
-                ds[1].style.borderTop = "5px solid gray";
-                ds[2].style.borderTop = "none";
-                tag.style.display = "none"
-                like.style.display = "block"
-            }
-            if (ds[i] == ds[2]) {
-                ds[0].style.borderTop = "none";
-                ds[1].style.borderTop = "none";
-                ds[2].style.borderTop = "5px solid gray";
-                like.style.display = "none"
-                tag.style.display = "block"
+        
+        $(".tab-content>div").hide()
+        let h= $(this).attr("href");
+        $(h).show();
+        $(h).addClass("show");
+        },300)
+    })
+    
+})
 
-            }
-        }
-}
+
+
+// function load_anh() {
+//     // alert("hello")
+//     let item = document.getElementById("item")
+//     let like = document.getElementById("like")
+//     let tag = document.getElementById("tag")
+//     let ds = document.querySelectorAll(".list>li")
+//     // console.log(ds)
+//     for (let i = 0; i < ds.length; i++)
+//         ds[i].onclick = function () {
+//             if (ds[i] == ds[0]) {
+//                 ds[0].style.borderTop = "5px solid gray";
+//                 ds[1].style.borderTop = "none";
+//                 ds[2].style.borderTop = "none";
+//                 tag.style.display = "none"
+//                 like.style.display = "none"
+//             }
+//             if (ds[i] == ds[1]) {
+//                 ds[0].style.borderTop = "none";
+//                 ds[1].style.borderTop = "5px solid gray";
+//                 ds[2].style.borderTop = "none";
+//                 tag.style.display = "none"
+//                 like.style.display = "block"
+//             }
+//             if (ds[i] == ds[2]) {
+//                 ds[0].style.borderTop = "none";
+//                 ds[1].style.borderTop = "none";
+//                 ds[2].style.borderTop = "5px solid gray";
+//                 like.style.display = "none"
+//                 tag.style.display = "block"
+
+//             }
+//         }
+// }
 
 function follow(obj) {
     //alert("click")

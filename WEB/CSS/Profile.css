@@ -102,26 +102,15 @@ div.infor div.setting {
     margin: 0px auto;
     font-size: 30px;
 }
-
-.menu-top ul li {
-
-    padding: 10px;
-    display: block;
+.menu-top ul li{
+    line-height: 2.5;
 }
-
-.menu-top a {
-    text-decoration: none;
-}
-
-.menu-top ul li:first-child {
-    border-top: 5px solid gray;
-}
-
 .menu-top {
     position: relative;
 }
 
 .items {
+    flex-wrap: wrap;
     position: absolute;
     top: 110%;
     left: 0;
@@ -129,12 +118,10 @@ div.infor div.setting {
     flex-wrap: wrap;
     background-color: #ffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 0px 0 rgba(0, 0, 0, 0.19);
-
 }
 
 .items>i {
     font-size: 100px;
-
     margin: 10px auto;
     margin-top: 100px;
 }
@@ -155,7 +142,7 @@ div.infor div.setting {
 
 .text {
     text-align: center;
-    height: 1000px;
+    height: 500px;
 
 }
 
@@ -182,14 +169,13 @@ div.infor div.setting {
 .bg-top div i {
     color: black;
     font-size: 50px;
-    /* padding: 5px; */
     cursor: pointer;
     margin-top: 40%;
 }
 
 .item:hover .bg-top {
     display: block;
-}
+} 
 
 .sub {
     width: 100%;
@@ -200,6 +186,10 @@ div.infor div.setting {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 
+} 
+
+.actives{
+    border-top: 5px solid saddlebrown !important;
 }
 
 .sub .avatar {

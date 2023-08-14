@@ -2,6 +2,11 @@
     margin: 0 !important;
 }
 
+.actived {
+    border-bottom: 2px solid white;
+    margin: 15px 0;
+}
+
 /* trang index */
 #m-center {
     width: 100%;
@@ -9,28 +14,24 @@
 }
 
 /* story */
-ul.stories li.story {
-    width: 21%;
-    margin: 5px;
+.wrapper i {
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
 }
 
-li.story a>div:first-child {
-    width: 50px;
-    height: 50px;
+.my-stories>.add {
+    top: 50%;
+}
+
+.carousel li>div:first-child {
+    width: 60px;
+    height: 60px;
     padding: 2px;
 
 }
 
-li.story a>div:last-child>h2 {
-    font-size: 12px;
-}
-
-.btn {
-    font-size: 20px;
-    top: 20%;
-}
-
-ul.stories #my_story i {
+.carousel li>div>h2 {
     font-size: 15px;
 }
 
@@ -139,6 +140,7 @@ div.infor-img>div>h2 {
 section.pic>div.next {
     width: 80%;
     height: 320px;
+    margin-top: 40%;
 }
 
 div.next span {
@@ -167,15 +169,52 @@ div>textarea {
     font-size: 15px;
 }
 
+section.tin>div.tao-tin {
+    margin-top: 35%;
+}
+
 /* thông báo */
 ul#res-note {
     position: fixed;
-    left: 0;
-    right: 0;
-    top: -30%;
+    left: 30%;
+    right: 5%;
+    top: -100%;
     z-index: 999;
-    bottom: 100%;
-    background-color: aliceblue;
+    bottom: 200%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffff;
+    border-radius: 10px;
+    visibility: inherit;
+}
+
+ul#res-note li ul {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 300px;
+}
+
+ul#res-note>li:nth-child(2) {
+    border-bottom: 1px solid navy;
+    line-height: 2;
+    font-size: 20px;
+}
+
+ul#res-note ul li {
+    text-align: left;
+    width: 100%;
+    margin: 10px;
+    line-height: 4;
+}
+
+/* Tạo tam mũi tên hướng lên trên */
+.arrow-up {
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffff;
+    margin-top: -10px;
+    margin-left: 45%;
 }
 
 /* index 3 */
@@ -208,16 +247,17 @@ div.fname {
 
 }
 
-div.fname>h1
- {
+div.fname>h1 {
     font-size: 25px;
     padding: 0;
 }
-div.fname>span{
+
+div.fname>span {
     font-size: 15px;
     color: gray;
     padding: 30px;
 }
+
 div.infor {
     width: 100%;
     justify-content: space-between;
@@ -238,9 +278,123 @@ div.infor div.setting i {
     padding: 0 10px;
 }
 
+/* index 1 */
+.bg h3 {
+    width: 50px;
+    padding: 5px;
+    font-size: 10px;
+
+}
+
+/* index 2 - tin nhắn */
+/* left  */
+section.left {
+    width: 25%;
+    padding-right: 5px;
+}
+
+ul.list-friend>li.item {
+    padding: 10px 0;
+}
+
+div.myName {
+    padding: 0;
+
+}
+
+div.myName h1 {
+    font-size: 15px;
+    padding: 7px 0;
+}
+
+div.myName>div:first-child {
+    flex-direction: column;
+    margin: 5px auto;
+}
+
+div.myName div.arrow-left {
+    display: block;
+}
+
+div.myName div.find {
+    width: 90%;
+    padding: 3px;
+
+}
+
+div.find>input {
+    width: 90%;
+    font-size: 10px;
+}
+
+div.f-img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+div.f-img .name {
+    display: block;
+}
+
+div.friend {
+    height: 600px;
+}
+
+ul.list-friend a.flex {
+    flex-direction: column;
+
+}
+
+div.f-name {
+    margin: 0;
+    display: none;
+}
+
+/* right */
+div.icon>ul>li {
+    margin: 5px;
+}
+
+div.icon>ul>li i {
+    font-size: 20px;
+}
+
+span.s-name {
+    display: block;
+}
+
+.node {
+    padding-top: 0;
+}
+
+.icon ul.flex {
+    margin: 13px 0
+}
+
+div.mes-top {
+    padding: 5px;
+    height: 75px;
+}
+
+div.inform div.f-img {
+    width: 50%;
+}
+
+div.ip-text>input {
+    font-size: 20px;
+}
+
+div.ip-text>i {
+    font-size: 20px;
+    margin: 17px 15px;
+
+}
+
+/* index 3 */
+
 .items {
     flex-direction: column;
-    background:none;
+    background: none;
     box-shadow: none;
 }
 
@@ -284,93 +438,6 @@ section.unfollow {
     font-size: 20px;
 }
 
-/* index 1 */
-.bg h3 {
-    width: 50px;
-    padding: 5px;
-    font-size: 10px;
-
-}
-/* index 2 - tin nhắn */
-/* left  */
-section.left{
-    width: 25%;
-    padding-right: 5px;
-}
-ul.list-friend>li.item{
-    padding: 10px 0;
-}
-div.myName{
-    padding: 0;
-
-}
-div.myName h1{
-    font-size: 15px;
-    padding: 7px 0;
-}
-div.myName>div:first-child{
-    flex-direction: column;
-    margin: 5px auto;
-}
-div.myName div.arrow-left{
-    display: block;
-}
-div.myName div.find{
-    width: 90%;
-    padding: 3px;
-
-}
-div.find>input {
-    width: 90%;
-    font-size: 10px;
-}
-
-div.f-img{
-    width: 70%;
-    margin: 0 auto;
-}
-div.f-img .name{
-    display: block;
-}
-div.friend {
-    height: 600px;
-}
-ul.list-friend a.flex{
-    flex-direction: column;
-
-}
-div.f-name{
-    margin: 0;
+.sub-Profile {
     display: none;
-}
-/* right */
-div.icon>ul>li {
-    margin: 5px;
-}
-div.icon>ul>li i {
-    font-size: 20px;
-}
-span.s-name{
-    display: block;
-}
-.node{
-    padding-top: 0;
-}
-.icon ul.flex{
-    margin: 13px 0
-}
-div.mes-top {
-    padding: 5px;
-    height: 75px;
-}
-div.inform div.f-img {
-    width: 50%;
-}
-div.ip-text>input {
-    font-size: 20px;
-}
-div.ip-text>i{
-    font-size: 20px;
-    margin: 17px 15px;
-
 }

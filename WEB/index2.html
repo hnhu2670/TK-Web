@@ -10,6 +10,8 @@
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
     <link rel="stylesheet" href="CSS/Header.css">
     <link rel="stylesheet" href="CSS/Add_new.css">
     <link rel="stylesheet" href="CSS/Message.css">
@@ -78,7 +80,7 @@
     <div class="flex">
         <header class="h_header header">
             <nav class="sub-menu menu flex">
-                <ul>
+                <ul class="tab-menu">
                     <li class="wow animate__animated animate__zoomIn">
                         <div class="name">
                             <a href="#">
@@ -96,7 +98,7 @@
                             <i class="fa-regular fa-compass"></i>
                         </a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="index2.html">
                             <i class="fa-regular fa-comment-dots"></i>
                         </a>
@@ -145,7 +147,7 @@
                             </div>
                             <div class="find flex">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-find">
+                                <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-find" onchange="search(this)">
                             </div>
                         </div>
                     </div>
