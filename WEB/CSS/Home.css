@@ -72,8 +72,13 @@ input#ip-search:focus {
     width: 100%;
     padding: 10px;
     overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
 
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel li {

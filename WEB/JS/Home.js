@@ -5,7 +5,7 @@ function click_story() {
 
     arrowIcons = document.querySelectorAll(".wrapper i")
 
-    let firstImgWidth = firstImg.clientWidth + 50
+    let firstImgWidth = 300
     console.log(firstImgWidth)
     arrowIcons.forEach(icon => {
         icon.addEventListener("click", () => {
