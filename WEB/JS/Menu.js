@@ -1,71 +1,76 @@
+function remove_active() {
+    $("li").removeClass("active")
+    let x = location.pathname;
+    // console.log(x);
+    switch (x) {
+        case "/index.html":
+            $("#active").addClass("active")
+            break;
+        case "/index1.html":
+            $("#discover").addClass("active")
+            break;
+        case "/index2.html":
+            $("#message").addClass("active")
+            break;
+    }
+}
 // click menu
 $(document).ready(() => {
     $(".tab-menu a").click(function () {
         setTimeout(() => {
             $(".tab-menu>li").removeClass("active")
-
             $(this).parent().addClass("active")
 
         }, 300)
 
     })
+
 })
 // click menu
 $(document).ready(() => {
     $(".tab-res a").click(function () {
         setTimeout(() => {
             $(".tab-res>li").removeClass("actived")
-
             $(this).parent().addClass("actived")
-
         }, 300)
 
     })
 })
+
 // thông báo
 function load_note(obj) {
+    let o = obj;
+    let par = o.parentNode.parentNode.parentNode;
+    let parWidth = par.clientWidth;
+    console.log(parWidth);
+    let a = document.getElementById("thongBao");
 
-    let a = document.getElementById("thongBao")
-    console.log(a)
-    if (a.style.left === "18%") {
-        setTimeout(() => {
-            a.style.left = "-18%"
-            a.style.right = "100%"
-
-        }, 300)
+    if (parseInt(a.style.left) <= 0) {
+        if (parWidth > 200) {
+            setTimeout(() => {
+                a.style.left = "18%";
+                a.style.right = "60%";
+            }, 300);
+        } else {
+            setTimeout(() => {
+                a.style.left = "8.1%";
+                a.style.right = "70%";
+            }, 300);
+        }
     } else {
         setTimeout(() => {
-            a.style.left = "18%"
-            a.style.right = "60%"
-
-
-        }, 300)
+            a.style.left = "-18%";
+            a.style.right = "100%";
+            remove_active();
+        }, 300);
     }
 }
-
-function load_subnote(obj) {
-    let a = document.getElementById("thongBao")
-    let form = document.querySelector("#form-active")
-    let note = document.getElementById("noti")
-    //console.log(note)
-    if (a.style.left === "-18%") {
-        setTimeout(() => {
-            a.style.left = "8.1%"
-            a.style.right = "70%"
-
-        }, 10)
-    }
-    else {
-        a.style.left = "-18%"
-        a.style.right = "100%"
-    }
-}
-
 function load_resnote(obj) {
     let a = document.getElementById("res-note")
     if (a.style.top === "10%") {
         a.style.top = "-100%"
         a.style.bottom = "200%"
+        remove_active();
 
     }
     else {
@@ -103,12 +108,12 @@ function checkImg(obj) {
 
 
 function tao_tin(obj) {
-
     let b = document.querySelector(".tao-tin")
     let news = document.getElementById("bangTin")
     setTimeout(() => {
         news.style.display = "block"
         b.style.display = "block"
+        remove_active();
 
     }, 200)
 }
@@ -119,6 +124,7 @@ function share(obj) {
     setTimeout(() => {
         a.style.display = "none"
         news.style.display = "none"
+        remove_active();
 
     }, 200)
 
@@ -136,6 +142,7 @@ function hide(obj) {
     let news = document.getElementById("bangTin")
     setTimeout(() => {
         news.style.display = "none"
+        remove_active();
     }, 500)
 }
 
@@ -148,9 +155,10 @@ $(window).on("load", function () {
                 $("#res-header").css({
                     "position": "fixed",
                     "z-index": 9999,
-                    "background-color": "gray",
+                    "background-color": "#b0c4da",
                     "margin-right": "16px"
                 })
+                $("#res-header").slideDown(100)
 
             }
             else {

@@ -39,46 +39,8 @@
 </head>
 
 <body onload="active()">
-    <!-- <header class="res-header">
-        <nav class="res-menu">
-            <ul class="flex">
-                <li class="wow animate__animated animate__zoomIn">
-                    <div>
-                        <a href="#">
-                            <img src="IMG/LM.png" alt="LOGO" class="logo">
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <a href="index.html">
-                        <i class="fa-solid fa-house"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="index1.html">
-                        <i class="fa-regular fa-compass"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="index2.html">
-                        <i class="fa-regular fa-comment-dots"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-bell"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-square-plus"></i>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header> -->
     <div class="flex">
-        <header class="h_header header">
+        <header class="h_header header" id="header">
             <nav class="sub-menu menu flex">
                 <ul class="tab-menu">
                     <li class="wow animate__animated animate__zoomIn">
@@ -98,15 +60,15 @@
                             <i class="fa-regular fa-compass"></i>
                         </a>
                     </li>
-                    <li class="active">
+                    <li class="active" id="message">
                         <a href="index2.html">
                             <i class="fa-regular fa-comment-dots"></i>
                         </a>
                     </li>
-                    <li id="noti" onclick="load_subnote(this)">
+                    <li id="noti" onclick="load_note(this)">
                         <a href="javascript:;" class="notes">
                             <i class="fa-regular fa-bell"></i>
-                            <ul class="note wow animate__animated "id="thongBao">
+                            <ul class="note wow animate__animated " id="thongBao">
                                 <li>
                                     <h3>THÔNG BÁO</h3>
                                 </li>
@@ -121,7 +83,7 @@
                                         <li>Thông báo 1</li>
                                         <li>Thông báo 2</li>
                                         <li>Thông báo 3</li>
-    
+
                                     </ul>
                                 </li>
                             </ul>
@@ -141,13 +103,15 @@
                 <section class="left">
                     <div class="myName">
                         <div class="flex">
-                            <div class="arrow-left"><a href="index4.html"><i class="fa-solid fa-arrow-left"></i></a></div>
+                            <div class="arrow-left"><a href="index4.html"><i class="fa-solid fa-arrow-left"></i></a>
+                            </div>
                             <div>
                                 <h1>Tin nhắn</h1>
                             </div>
                             <div class="find flex">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                                <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-find" onchange="search(this)">
+                                <input type="text" placeholder="Nhập thông tin cần tìm......" id="ip-find"
+                                    onchange="search(this)">
                             </div>
                         </div>
                     </div>

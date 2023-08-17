@@ -102,9 +102,11 @@ div.infor div.setting {
     margin: 0px auto;
     font-size: 30px;
 }
-.menu-top ul li{
+
+.menu-top ul li {
     line-height: 2.5;
 }
+
 .menu-top {
     position: relative;
 }
@@ -175,7 +177,7 @@ div.infor div.setting {
 
 .item:hover .bg-top {
     display: block;
-} 
+}
 
 .sub {
     width: 100%;
@@ -186,10 +188,10 @@ div.infor div.setting {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 
-} 
+}
 
-.actives{
-    border-top: 5px solid saddlebrown !important;
+.actives {
+    border-top: 3px solid saddlebrown !important;
 }
 
 .sub .avatar {

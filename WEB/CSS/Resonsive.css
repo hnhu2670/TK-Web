@@ -278,6 +278,10 @@ div.infor div.setting i {
     padding: 0 10px;
 }
 
+.menu-top .tab li {
+    line-height: 1.5;
+}
+
 /* index 1 */
 .bg h3 {
     width: 50px;
@@ -391,10 +395,13 @@ div.ip-text>i {
 }
 
 /* index 3 */
+#tab1>.items {
+    background: none !important;
+
+}
 
 .items {
     flex-direction: column;
-    background: none;
     box-shadow: none;
 }
 

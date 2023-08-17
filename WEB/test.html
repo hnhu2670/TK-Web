@@ -111,135 +111,77 @@
             width: calc(100%/5);
             margin-left: 10px;
         }  */
+        .header {
+            width: 100px;
+        }
     </style>
 </head>
 
-<body onclick="click_story()">
-    <!-- <div class="wrapper">
-        <i class="fa-solid fa-arrow-left" id="left"></i>
-        <div class="carousel">
-            <img src="/IMG/home/av1.jpg" alt="">
-            <img src="/IMG/home/av2.jpg" alt="">
-            <img src="/IMG/home/av3.jpg" alt="">
-            <img src="/IMG/home/av4.jpg" alt="">
-            <img src="/IMG/home/av5.jpg" alt="">
-            <img src="/IMG/home/av6.jpg" alt="">
-            <img src="/IMG/home/av7.jpg" alt="">
-            <img src="/IMG/home/av8.jpg" alt="">
-            <img src="/IMG/home/av9.jpg" alt="">
-        </div>
-        <i class="fa-solid fa-arrow-right" id="right"></i>
-    </div> -->
+<body>
 
 
-    <div class="wrapper">
-        <i class="fa-solid fa-angle-left" id="left"></i>
-        <ul class="carousel flex">
-            <li>
-                <div><img src="IMG/home/av7.jpg" alt=""></div>
-                <div>
-                    <h2>Tin của bạn</h2>
-                </div>
-                <a href="javascript:;" style="background: none;" onclick=" tao_tin(this)">
-                    <i class="fa-solid fa-plus fa-beat-fade" style="color: #22df1f;"></i>
-                </a>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>1</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>2</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>3</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>4</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>5</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>6</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>1</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>2</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>3</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>4</h2>
-                </div>
-            </li>
-            <li>
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>5</h2>
-                </div>
-            </li>
-            <li class="item">
-                <div><img src="IMG/home/av1.jpg" alt=""></div>
-                <div>
-                    <h2>6</h2>
-                </div>
-            </li>
-        </ul>
-        <i class="fa-solid fa-angle-right" id="right"></i>
-    </div>
+
+    <header class="h_header header" id="header">
+        <nav class="sub-menu menu flex">
+            <ul class="tab-menu">
+                <li class="wow animate__animated animate__zoomIn">
+                    <div class="name">
+                        <a href="#">
+                            <img src="IMG/LM.png" alt="LOGO" class="logo">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="index1.html">
+                        <i class="fa-regular fa-compass"></i>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="index2.html">
+                        <i class="fa-regular fa-comment-dots"></i>
+                    </a>
+                </li>
+                <li id="noti" onclick="load_subnote(this)">
+                    <a href="javascript:;" class="notes">
+                        <i class="fa-regular fa-bell"></i>
+                        <ul class="note wow animate__animated " id="thongBao">
+                            <li>
+                                <h3>THÔNG BÁO</h3>
+                            </li>
+                            <li>
+                                <ul class="notif">
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+                                    <li>Thông báo 1</li>
+                                    <li>Thông báo 2</li>
+                                    <li>Thông báo 3</li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </a>
+                </li>
+                <li id="add-new" onclick=" tao_tin(this)">
+                    <a href="javascript:;">
+                        <i class="fa-regular fa-square-plus"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
     <script>
-        function click_story() {
-            const carousel = document.querySelector(".carousel")
-            // console.log(carousel)
-            firstImg = carousel.querySelectorAll("li")[0]
+        console.log(document.querySelector(".header").clientWidth)
 
-            arrowIcons = document.querySelectorAll(".wrapper i")
-
-            let firstImgWidth = firstImg.clientWidth + 50
-            console.log(firstImgWidth)
-            arrowIcons.forEach(icon => {
-                icon.addEventListener("click", () => {
-                    console.log(firstImgWidth)
-                    if (icon.id === "left") {
-                        carousel.scrollLeft -= firstImgWidth
-                    }
-                    else { carousel.scrollLeft += firstImgWidth }
-                })
-
-            });
-        }
 
 
     </script>
