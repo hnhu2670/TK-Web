@@ -48,27 +48,27 @@ function load_friends() {
 };
 
 
-function load_story(){
+function load_story() {
 
-        fetch(`JSON/stories.json`)
-            .then((res) => {
-                return res.json();
-            }).then((data) => {
-                for (let i of data) {
-                    let a = document.getElementById("stories_main");
-                    a.innerHTML +=
-                        `<li>
+    fetch(`JSON/stories.json`)
+        .then((res) => {
+            return res.json();
+        }).then((data) => {
+            for (let i of data) {
+                let a = document.getElementById("stories_main");
+                a.innerHTML +=
+                    `<li>
                         <div><img src="${i.image}" alt=""></div>
                         <div>
                             <h2>${i.name}</h2>
                         </div>
                     </li>`
-                }
-            });
-    
-    
-    
-    };
+            }
+        });
+
+
+
+};
 
 function mini_chat(obj) {
     let a = obj
@@ -129,14 +129,22 @@ function minuschat() {
 function search(obj) {
     // let s = document.getElementById("ip-search").value
     let s = obj.value
-    console.log(s)
-    let n = document.querySelectorAll(".myName > a >h3")
-    for (let i = 0; i < n.length; i++) {
-        if (n[i].textContent.indexOf(s) >= 0) {
-            n[i].style.color = "gold"
-        }
+    // console.log(s)
+    if (s !== "") {
+        let n = document.querySelectorAll(".myName > a >h3")
+        for (let i = 0; i < n.length; i++) {
+            if (n[i].textContent.indexOf(s) >= 0) {
+                n[i].style.color = "gold"
+            }
 
+        }
+        setTimeout(() => {
+            for (i of n) {
+                i.style.color = "navy"
+            }
+        }, 3000)
     }
+
 }
 
 // tìm kiếm bạn
