@@ -448,3 +448,43 @@ section.unfollow {
 .sub-Profile {
     display: none;
 }
+
+/* discover */
+
+.top {
+    width: 100%;
+    display: block;
+}
+
+.t-left {
+    width: 100% !important;
+}
+
+.t-center{
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.t-right {
+    width:100% !important;
+}
+
+.bottom {
+    display: block;
+}
+
+.bottom div {
+    width:100%;
+}
+
+.bg h3 {
+    margin-left: auto;
+    width: 160px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    background-color: navy;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}

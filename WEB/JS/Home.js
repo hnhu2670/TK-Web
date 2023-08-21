@@ -47,6 +47,29 @@ function load_friends() {
 
 };
 
+
+function load_story(){
+
+        fetch(`JSON/stories.json`)
+            .then((res) => {
+                return res.json();
+            }).then((data) => {
+                for (let i of data) {
+                    let a = document.getElementById("stories_main");
+                    a.innerHTML +=
+                        `<li>
+                        <div><img src="${i.image}" alt=""></div>
+                        <div>
+                            <h2>${i.name}</h2>
+                        </div>
+                    </li>`
+                }
+            });
+    
+    
+    
+    };
+
 function mini_chat(obj) {
     let a = obj
     let pic = a

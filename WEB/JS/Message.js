@@ -68,7 +68,8 @@ function click_Name(obj) {
 }
 function search(obj){
     // let s = document.getElementById("ip-search").value
-    let s = obj.value
+    let a = obj
+    let s = a.value
     
     let n = document.querySelectorAll(".f-name > h3")
     for (let i=0;i<n.length;i++)
@@ -77,9 +78,14 @@ function search(obj){
         {
             n[i].style.color="gold"
         }
-        else{
-            alert("Không tìm thấy")
-            break
-        }
+
     }
+    
+        setTimeout(()=>{
+            for(i of n){
+            i.style.color="navy"
+            }
+        },3000)
+    
+
 }
